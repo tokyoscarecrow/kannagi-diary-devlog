@@ -1,0 +1,2 @@
+# kannagi-diary-devlog
+Public

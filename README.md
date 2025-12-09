@@ -1,7 +1,7 @@
-# Kannnabi Diary – Devlog & Story World Repository
+# Kannnagi Diary – Devlog & Story World Repository
 
 This repository archives the development process of the original story  
-**『かんなびダイアリー』(Kannnabi Diary)** – a modern fantasy narrative
+**『かんなぎダイアリー』(Kannnagi Diary)** – a modern fantasy narrative
 created with a hybrid workflow of **manual worldbuilding + YAML-structured data + AI-assisted writing**.
 
 ## 🔍 What this repository contains

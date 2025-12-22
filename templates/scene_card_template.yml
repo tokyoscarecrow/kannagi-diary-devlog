@@ -1,1 +1,135 @@
+# ==========================================================
+# SCENE CARD TEMPLATE (YAML)
+# Purpose:
+#   - Design a scene as a "function" (not just events)
+#   - Control disclosure (reveal) and scope (include/exclude)
+#   - Maintain continuity across scenes (tone / emotion / hooks)
+#
+# How to use:
+#   1) Fill required fields first (marked "required")
+#   2) Keep scene_question specific and answerable by reading
+#   3) Use scope_control.exclude to prevent unwanted exposition
+#   4) Keep beats as Goal -> Action (function-driven)
+#
+# For concrete examples, see:
+#   raw/scene_cards/
+# ==========================================================
+
+scene:
+  # required: stable identifier (recommended: EPxx_SCxx)
+  id: ""
+
+  # required: structural position
+  chapter: 0
+  seq: 0
+
+  # optional but recommended: human-readable title
+  title: ""
+
+  # optional: in-story time label (e.g., "early Sep / first day")
+  date: ""
+
+  # required: place(s) where the scene happens
+  # - use string or list depending on your needs
+  setting: ""
+
+  # required: who appears (names optional in a template; roles recommended)
+  characters:
+    - name: ""          # optional: leave blank if you want role-only control
+      role: ""          # required: narrative function in this scene
+
+  # --------------------------------------------------------
+  # REQUIRED CORE: what this scene DOES for the narrative
+  # --------------------------------------------------------
+  goals:
+    # required: what the protagonist (or focal character) must achieve here
+    protagonist: ""
+
+    # required: what opposes the protagonist in this scene
+    # NOTE: antagonist does NOT need to be a person.
+    #       It can be a rule, institution, emotion, environment, or risk.
+    antagonist: ""
+
+    # required: a question the reader should carry after the scene
+    # Write it as an actual question, specific to this scene.
+    scene_question: ""
+
+  # required: central contradiction or tension of the scene
+  # - you may use a single string, or split into internal/external
+  conflict: ""
+
+  # required: emotional transitions inside the scene (use "A -> B -> C")
+  emotional_phase: ""
+
+  # --------------------------------------------------------
+  # CONTINUITY: connect this scene to the previous/next
+  # --------------------------------------------------------
+  tone_continuity:
+    # optional: what tone elements are inherited from previous scene
+    inherit_from_previous: []
+    # optional: what this scene prepares for (next emotional/plot target)
+    prepare_for_next: []
+
+  # optional: when you need to restate core rules (for coherence)
+  world_rule_reminder: []
+
+  # --------------------------------------------------------
+  # BEATS: function-driven micro-structure (Goal -> Action)
+  # --------------------------------------------------------
+  beats:
+    - id: "B1"
+      # required: what this beat accomplishes (narrative function)
+      goal: ""
+      # required: what happens / what is done to achieve it (observable action)
+      action: ""
+
+  # --------------------------------------------------------
+  # SCOPE CONTROL: what to include / exclude in the prose
+  # Strongly recommended for AI-assisted generation.
+  # --------------------------------------------------------
+  scope_control:
+    # optional: MUST include (bullets). Use short, concrete items.
+    include: []
+    # optional: MUST NOT include (bullets). Prevent unwanted exposition.
+    exclude: []
+
+  # --------------------------------------------------------
+  # DISCLOSURE POLICY: what can be revealed in this scene
+  # --------------------------------------------------------
+  reveal_policy:
+    # required: choose one label consistently across the project
+    # recommended set:
+    #   - "部分開示" / "伏線のみ" / "最小開示" / "全開示"
+    level: ""
+    # optional: constraints or notes about what must remain hidden
+    notes: []
+
+  # --------------------------------------------------------
+  # OVERRIDES: per-scene deviations from project-wide config/style
+  # Use ONLY when you need local control; otherwise leave empty.
+  # --------------------------------------------------------
+  overrides:
+    style_guide:
+      # optional: "low / mid / high" or project-defined labels
+      narrative_temperature: ""
+      # optional: "low / medium / high"
+      exposition_density: ""
+      # optional: e.g., "direct / indirect" if violence appears
+      violence_portrayal: ""
+    # optional: add other override blocks as needed
+    # e.g., camera_style, dialogue_ratio, narrator_distance, etc.
+
+  # --------------------------------------------------------
+  # OUTPUT CONTROL: generation or drafting constraints
+  # --------------------------------------------------------
+  output_format: ""    # e.g., "narrative prose + inner monologue"
+  target_length: ""    # e.g., "1400-1700字"
+
+meta:
+  # required: lifecycle state of the card
+  # recommended set: "draft" / "revised" / "design_fixed"
+  status: "draft"
+
+  # optional: free notes for editors (not for the final prose)
+  notes: ""
 

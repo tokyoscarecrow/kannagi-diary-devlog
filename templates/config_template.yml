@@ -1,1 +1,111 @@
+# ==========================================================
+# NARRATIVE COMPOSER CONFIG (TEMPLATE)
+# Purpose: Reusable schema for narrative generation & review
+# Notes:
+# - This is a TEMPLATE (no project-specific proper nouns)
+# - For a concrete example, see: raw/config/
+# ==========================================================
+
+project:
+  # required: Project title used in metadata and outputs
+  title: ""
+  # optional: genre labels
+  genre: ""
+  # optional: thematic tags
+  keywords: []
+  # required: core theme statement (1 sentence)
+  core_theme: ""
+  # required: tone & style direction (short phrase)
+  tone_style: ""
+  # optional: target reader/player
+  target_audience: ""
+  # optional: structure label (e.g., three-act)
+  narrative_structure: ""
+  note:
+    # optional: how/where you publish this project
+    publishing_intent: ""
+
+world:
+  # required: short summary of the setting (2–3 lines)
+  summary: ""
+  # required: definition of the key anomaly/power (1–2 lines)
+  definition_of_power: ""
+  naming:
+    common_name: ""
+    formal_name: ""
+  # required if "power" is regulated: institutional handling
+  government_policy: ""
+  public_awareness: ""
+  ethics_structure: ""
+  motifs: []
+  historical_background:
+    overview: ""
+    modern_handling: ""
+
+magic:
+  # required: how the power manifests / constraints
+  inheritance: ""
+  control_mechanism: ""
+  categories:
+    # optional: define categories if needed
+    category_a:
+      name: ""
+      description: ""
+    category_b:
+      name: ""
+      description: ""
+  taboo_policy:
+    # required: headline rule set
+    headline: ""
+    rules:
+      - id: "R1"
+        text: ""
+  surveillance:
+    reporting_cycle: ""
+    detection:
+      method: ""
+      blind_spot: ""
+      note: ""
+  enforcement:
+    violation_consequence: ""
+    incentives: ""
+
+structure:
+  # required: base model (e.g., three-act)
+  base_model: ""
+  inciting_incident: ""
+  turn_point: ""
+  climax: ""
+  ending_policy: ""
+
+style_guide:
+  # required: narrator POV, tense, register etc.
+  narrator_person: ""
+  tense: ""
+  register: ""
+  sentence_length: ""
+  imagery_focus: []
+  dialogue_format: ""
+  kanji_kana_ratio: ""
+
+emotion_curve:
+  # optional: used when you evaluate emotional pacing
+  - phase: ""
+    main_emotion: ""
+    value_range: [0.0, 0.0]
+    note: ""
+
+themes_symbols:
+  # optional: used when you evaluate theme alignment
+  statements: []
+  motifs: []
+
+evaluation:
+  # required: evaluation axes used in review workflow
+  axis_1:
+    description: ""
+    method: ""
+  axis_2:
+    description: ""
+    method: ""
 

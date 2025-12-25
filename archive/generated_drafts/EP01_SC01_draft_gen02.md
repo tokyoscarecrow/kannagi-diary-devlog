@@ -4,7 +4,7 @@
 EP01_SC01
 
 ## 生成段階
-初稿生成（Config v2.0 / Scene Card V2）
+初稿生成（Config v1.0 / Scene Card V2）
 
 ## 採用しなかった理由（要約）
 - 最初期の試行

@@ -1,1 +1,108 @@
+# ==========================================================
+# SCENE CARD
+# Project: かんなびメモランダム
+# File: scene_cards/EP01/EP01_SC06.yaml
+# Version: 1.0
+# ==========================================================
+
+scene:
+  id: "EP01_SC06"
+  episode: "EP01"
+  chapter: 1
+  seq: 6
+
+  date: "9月上旬・二学期初日"
+  time: "放課後〜夕方"
+  location:
+    primary: "校内（廊下）"
+    optional:
+      - "保健室前"
+      - "昇降口付近"
+      - "下校途中"
+
+  title: "言えないこと"
+  setting: "真魚の告白（真偽不明）／隼太が『共有できない秘密』を抱え込む"
+
+  characters:
+    - name: "飯綱隼太"
+      role: "主人公／告白を受けるが認められない"
+    - name: "氷川真魚"
+      role: "接近者／『私も魔法者』を告げる"
+    - name: "大神みずは"
+      role: "幼なじみ／何かを察するが踏み込めない"
+
+  goals:
+    protagonist: "真魚の言葉の真偽を判断できないまま、秘密を抱え込む"
+    antagonist: "共有できないルール（告白禁止）と、破綻の恐怖"
+    scene_question: "真魚はなぜ隼太を『魔法者』だと疑うのか？ そして隼太はそれを誰にも言えないのか？"
+
+  conflict: "真魚の一言が隼太の心理を揺らすが、隼太は否定も肯定もできず、みずはにも共有できない"
+
+  emotional_phase: "静かな日常 → 静かな衝撃 → 分断 → 孤独の自覚"
+
+  word_count_guideline:
+    target: 2800
+    tolerance: 600
+    note: "出来事は増やさず、間・距離・沈黙で密度を上げる（長尺可）"
+
+  world_rule_reminder:
+    - "R2: 魔法の存在および自身が魔法者であることを他者に告げてはならない"
+    - "R4: 他の魔法者の存在を知っても公言してはならない"
+    - "（重要）隼太は会話の中で『魔法』前提を共有しない。常にとぼける／話題をずらす"
+
+  beats:
+    - id: "B1"
+      goal: "隼太が一人の状況で真魚に捕まる（自然な偶然）"
+      action: "放課後の廊下で声をかけられる"
+      risk: "周囲に聞かれる可能性"
+    - id: "B2"
+      goal: "真魚が核心を告げる（証明なし・感情なし）"
+      action: "『私も魔法者です』を淡々と言う"
+      risk: "隼太が反射的に前提共有してしまう危険"
+      guardrails:
+        - "隼太の返答は『とぼける』。例：『なにそれ。ラノベとかの話？』"
+    - id: "B3"
+      goal: "隼太の内面動揺を最大化する（出来事は増やさない）"
+      action: "ルールと恐怖が反射的に立ち上がる"
+      risk: "説明が過剰になりテンポが落ちる"
+    - id: "B4"
+      goal: "真魚の疑念に『理由がある』と感じさせる（全貌は伏せる）"
+      action: "真魚は断片だけを置く（例：『似ていたので』『知っている人がそうだった』）"
+      risk: "直感・虫の知らせに見える表現"
+      guardrails:
+        - "根拠は観察と過去経験の示唆。超常的な感知は禁止"
+    - id: "B5"
+      goal: "みずは合流で『言えない分断』を確定"
+      action: "みずはが声をかける／隼太は話せない"
+      risk: "みずはが詮索しすぎる"
+      guardrails:
+        - "みずはは深追いしない。空気だけが変わる"
+    - id: "B6"
+      goal: "締め：日常は続くが『質が変わった』と示す"
+      action: "隼太が秘密を抱えたまま下校"
+      payoff: "次の不穏（SC07）へ"
+
+  overrides:
+    style_guide: {}
+    speech_style: {}
+    reveal_policy:
+      level: "部分開示"
+      notes:
+        - "真魚の告白は真偽不明のまま"
+        - "疑った理由は断片のみ提示し、具体説明は後回し"
+
+  output_format: "narrative prose + inner monologue + natural dialogue"
+  expected_outputs:
+    - "SceneText (Markdown)"
+    - "EmotionScore (0.0–1.0)"
+    - "NarrativeNotes"
+    - "RewriteSuggestions"
+
+meta:
+  created_at: "2025-12-22"
+  updated_at: "2025-12-22"
+  status: "draft"
+  notes:
+    - "SC06は前半ピーク。出来事を増やさず心理密度で長尺化する"
+    - "保健室は『逃げ場として意識される』程度の使い方は可（入室は任意）"
 

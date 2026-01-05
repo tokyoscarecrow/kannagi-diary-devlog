@@ -81,8 +81,31 @@
 
 ---
 
-## ディレクトリ構成
+## 📁 ディレクトリ構成
+```
+├── docs/                    # 編集済みドキュメント（推奨読み物）
+│   ├── 00_current_state.md  # 現在の構成（最新状態）
+│   ├── 01_overview.md       # 全体概要と方法論
+│   ├── 10_config_design.md  # Config設計の考え方
+│   ├── 20_scene_cards.md    # シーンカード手法
+│   ├── 30_tension_curve.md  # テンション設計
+│   └── 40_clinical_review.md # クリニカルレビュー手法
+│
+├── raw/                     # 一次資料（生ログ・メモ）
+│   └── 判断履歴、会話ログ、未整理メモなど
+│
+├── archive/                 # 廃案・過去バージョン
+│   └── generated_drafts/    # 採用されなかったAI生成テキスト
+│
+├── templates/               # 再利用可能なテンプレート
+│   └── YAMLファイル、プロンプトテンプレートなど
+│
+├── characters/              # キャラクター設定資料
+├── diagrams/                # 図解・構造図
+└── README.md               # このファイル
+```
 
+---
 
 ## 🌐 Author
 Yoshida Ryo – Narrative Designer / Director  

@@ -21,8 +21,7 @@
 - Scene Card → Tension Curve → Clinical Review の構造的プロセス
 - 成功だけでなく失敗・廃案も含めて記録公開
 
-※完成した物語は[noteマガジン](URL)で公開中
-```
+※完成した物語は下記noteマガジンで公開中
 
 ---
 

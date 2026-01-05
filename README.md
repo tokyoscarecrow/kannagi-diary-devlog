@@ -92,7 +92,7 @@
 │   └── 40_clinical_review.md # クリニカルレビュー手法
 │
 ├── raw/                     # 一次資料（生ログ・メモ）
-│   └── 判断履歴、会話ログ、未整理メモなど
+│   └── 現在使用している、ConfigおよびScene cardの最新版
 │
 ├── archive/                 # 廃案・過去バージョン
 │   └── generated_drafts/    # 採用されなかったAI生成テキスト

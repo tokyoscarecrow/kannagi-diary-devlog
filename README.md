@@ -101,26 +101,48 @@
 
 ## 📁 ディレクトリ構成
 ```
-├── docs/                    # 編集済みドキュメント（推奨読み物）
-│   ├── 00_current_state.md  # 現在の構成（最新状態）
-│   ├── 01_overview.md       # 全体概要と方法論
-│   ├── 10_config_design.md  # Config設計の考え方
-│   ├── 20_scene_cards.md    # シーンカード手法
-│   ├── 30_tension_curve.md  # テンション設計
-│   └── 40_clinical_review.md # クリニカルレビュー手法
+├── docs/                              # 編集済みドキュメント（推奨読み物）
+│   ├── 00_current_state.md            # 現在の到達点・進行状況（更新点の要約）
+│   ├── 01_overview.md                 # 全体概要／制作思想／方法論サマリ
+│   │
+│   ├── 10_config_design.md            # Config設計の考え方
+│   ├── 20_scene_cards.md              # シーンカード手法の解説
+│   ├── 30_tension_curve.md             # テンション設計とEP01検証（確定）
+│   │
+│   ├── 40_clinical_review.md           # クリニカルレビュー手法（一般論）
+│   │
+│   ├── 90_ep01_review.md               # EP01 トータルレビュー（評価あり）
+│   └── 95_ep01_re_review.md            # EP01 破壊的レビュー（ダメ出しのみ）
 │
-├── raw/                     # 一次資料（生ログ・メモ）
-│   └── 現在使用している、ConfigおよびScene cardの最新版
+├── raw/                               # 一次資料（生ログ・未編集・思考の源流）
+│   ├── config/                        # 現在使用している Config 最新版（YAML）
+│   ├── scene_cards/                   # 現在使用している Scene Card 最新版
+│   ├── world_foundation/              # 世界観成立の一次テキスト
+│   │   ├── world_concept_initial.md
+│   │   └── README.md
+│   ├── decision_logs/                 # 判断履歴（順序変更・方針転換など）
+│   │   ├── EP01_SC07_SC08_reorder.md
+│   │   └── README.md
 │
-├── archive/                 # 廃案・過去バージョン
-│   └── generated_drafts/    # 採用されなかったAI生成テキスト
+├── archive/                           # 廃案・過去バージョン・比較用
+│   ├── generated_drafts/              # 採用されなかったAI生成本文
+│   ├── scene_cards/                   # 過去版シーンカード
+│   └── config/                        # 過去版Config
 │
-├── templates/               # 再利用可能なテンプレート
-│   └── YAMLファイル、プロンプトテンプレートなど
+├── templates/                         # 再利用可能なテンプレート
+│   ├── config_template.yml            # 抽象化されたConfigテンプレ
+│   ├── scene_card_template.yml        # シーンカードテンプレ
+│   └── review_templates/              # レビュー用テンプレ群
 │
-├── characters/              # キャラクター設定資料
-├── diagrams/                # 図解・構造図
-└── README.md               # このファイル
+├── characters/                        # キャラクター設定資料
+│   └── 00_characters_initial_draft.md # 最初期キャラ設定原文（一次資料）
+│
+├── diagrams/                          # 図解・構造図（任意・将来拡張）
+│   ├── narrative_flow_ep01.png
+│   └── tension_curve_ep01.png
+│
+└── README.md                          # リポジトリ総合README
+
 ```
 
 ---

@@ -77,7 +77,7 @@
    - Config 設計 → [`docs/10_config_design.md`](docs/10_config_design.md)
    - シーンカード → [`docs/20_scene_cards.md`](docs/20_scene_cards.md)
    - テンション曲線 → [`docs/30_tension_curve.md`](docs/30_tension_curve.md)
-   - クリニカルレビュー → [`docs/40_clinical_review.md`](docs/40_clinical_review.md)
+   - クリニカルレビュー → [`docs/40_clinical_review.md`](docs/90_clinical_review.md)
 
 ---
 

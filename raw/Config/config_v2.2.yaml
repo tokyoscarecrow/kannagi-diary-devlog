@@ -1,0 +1,325 @@
+﻿# ==========================================================
+# NARRATIVE COMPOSER CONFIG
+# Project: かんなぎダイアリー (Kannabi Memorandum)
+# Author: Yoshida Ryo
+# Version: 2.2 (working)
+# ==========================================================
+
+project:
+  title: "かんなぎダイアリー"
+  genre: "現代ファンタジー／シニカル社会派コメディ"
+  keywords: ["国家機密", "特異体質", "隠し事", "人間関係と孤独", "将来"]
+  core_theme: "自分の可能性を拡げ、人生を切り開くのに大事なものは勇気だ"
+  tone_style: "静かな現代描写 × 内省的心理 × 映像的リアリズム"
+  target_audience: "青年～成人向けドラマ"
+  narrative_structure: "三幕構成（導入／対立／解放）"
+  note:
+    publishing_intent: "制作プロセスをGitHub/ブログで公開する前提で、更新履歴を残す"
+
+world:
+  summary: "現代日本。10万人に1人が『魔法者』として特異体質を持つ。"
+  definition_of_magosha: "精神エネルギーを物質に作用させる能力。強度は感情に強く依存。"
+  naming:
+    common_name: "魔法者"
+    formal_name: "特種能力者"
+  government_policy: "厚生労働省地方局に『魔法者管理課』を置き、把握・監視・隔離を運用する。"
+  public_awareness: "存在は歴史的に隠蔽され、国家中枢の最高機密。"
+  ethics_structure: "魔法＝社会の危険因子＝隠蔽・隔離すべき、という国家の秘密政策"
+  motifs: ["光", "手", "記録", "記憶"]
+  historical_background:
+    overview: "古代から存在。陰陽寮→神祇官/神祇省→内務省寺社/神社行政→戦後厚生行政へ移管。"
+    modern_handling: "地方厚生局内の担当部署が捜索・把握・管理指導・生涯監視を行う。"
+
+magic:
+  inheritance: "遺伝的傾向は未確認。発現は突然変異的。"
+  control_mechanism: "感情変動と強く連動し、心理的ストレス下で暴発リスクが上昇。"
+  categories:
+    passive:
+      name: "パッシブ能力"
+      description: "周囲30mの他者感知。接触時に思考読取。自然発生で禁止対象ではない。"
+    active:
+      name: "アクティブ能力"
+      description: "物質三態（固体・液体・気体）のいずれか一系統のみ操作可能。プラズマ操作は最危険。"
+  taboo_policy:
+    headline: "公私問わず使用禁止（規制の中核）"
+    rules:
+      - id: "R1"
+        text: "他者に影響を与える魔法の使用は厳禁（隔離措置に直結する最重要規制）。"
+      - id: "R2"
+        text: "魔法の存在および自身が魔法者であることを他者に告げてはならない。"
+      - id: "R3"
+        text: "魔法の使用を他者に目撃・察知されてはならない。"
+      - id: "R4"
+        text: "他の魔法者の存在を知っても、公言してはならない。"
+      - id: "R5"
+        text: "日常生活の利便に限る自己使用は黙認（グレー運用）。"
+  surveillance:
+    reporting_cycle: "月単位。担当者が月1回の面接（必要時は臨時面接・視察・張り込み）。"
+    detection:
+      method: "局地的気候変動を指標に、気象庁アメダス相当の監視網で検知されうる。"
+      blind_spot: "荒天（台風・集中豪雨・雷雨等）では変動が打ち消され検知困難。事実は極秘扱い。"
+      note: "過去にこの仕組みに気づき、欲望のために悪用した者がいる（真魚の父に関係）。"
+  enforcement:
+    violation_consequence: "違反時は強制措置入院を名目に社会的隔離（長期〜終生）。"
+    incentives: "露見回避と引き換えに年金・税免除・保険/医療補助・学費免除など特典が付与される（運用上）。"
+
+locations:
+  infirmary:
+    name: "保健室"
+    type: "学校内共有スペース"
+    narrative_role:
+      - "秘密が一時的に共有される場所"
+      - "感情が揺れたときに逃げ込める場所"
+      - "親密度が高い者同士の内緒話が成立する場所"
+    tone:
+      - "日常的"
+      - "静か"
+      - "やや閉じているが安心感がある"
+    symbolic_meaning:
+      - "守られる空間"
+      - "社会から一時的に切り離される中間領域"
+    constraints:
+      - "特異なイベントは原則発生しない"
+      - "魔法使用の直接舞台にはしない（例外は後半のみ）"
+    usage_policy:
+      - "複数シーンで繰り返し使用可"
+      - "重要な告白・決断の前後に配置すると効果的"
+      - "説明的に使わず、自然な流れで登場させる"
+    continuity_note:
+      - "『保健係』設定と連動し、隼太が足を運ぶ理由を作れる"
+
+characters:
+  - name: "飯綱隼太"
+    reading: "いづな しゅんた"
+    role: "主人公"
+    age: 16
+    attributes: ["魔法者", "六ッ川高校2年生"]
+    body: { height_cm: 172, build: "標準体型" }
+    personality: "学業は中の上、運動も平凡。将来に大きな期待はなく諦観気味。魔法は『無ければ良かった』と思うほど消極的。"
+    outer_goal: "平穏な人生を送りたい。"
+    inner_desire: "抑圧されたプライドを解放したい。"
+    greatest_fear: "才能を発揮すると批判や誹謗中傷を受けること。"
+    change_arc: "「隠す」→「大事なものを守るために使いたい」"
+    keywords: ["抑圧", "自己承認欲求", "劣等感とプライド", "優しい心根"]
+    speech_style:
+      person: "一人称＝僕"
+      politeness: "常体中心（教師・初対面には丁寧体）"
+      tempo: "短め。逡巡→一拍置いて本音"
+      sentence_endings: ["…", "——", "かな", "だろ"]
+      tics: ["内心ツッコミは括弧（）で簡潔に"]
+
+  - name: "大神みずは"
+    reading: "おおみわ みずは"
+    role: "ヒロイン／幼なじみ"
+    age: 17
+    attributes: ["六ッ川高校2年生"]
+    body: { height_cm: 155, build: "標準体型" }
+    personality: "学業優秀で明るく人気者。幼少期に隼太の魔法に救われ、秘密を知る稀有な普通人。自分がきっかけで隼太の人生が狂ったと思い『守る』と決意。"
+    outer_goal: "秘密を守り続ける。"
+    inner_desire: "一生そばにいたい。"
+    greatest_fear: "魔法のせいで隼太を失うこと。"
+    change_arc: "「庇護」→「成長を応援」"
+    keywords: ["親愛", "本心を隠す", "嫉妬と独占欲", "献身", "幼馴染"]
+    speech_style:
+      person: "一人称＝わたし"
+      politeness: "常体中心（教師・初対面でも同じ）"
+      tempo: "音量大。元気。ハッキリ"
+      sentence_endings: ["…", "——", "でしょ", "だよ", "じゃん", "ね？"]
+      tics: ["触れ合い描写を伴う呼びかけ（身体を寄せる等）は地の文で補助"]
+    appearance_profile:
+      hair:
+        state: "ショートボブ、ライトブラウン"
+        behavior: "無意識に直す"
+      posture:
+        state: "やや前傾"
+        implication: "人に対してオープン"
+      gaze:
+        state: "よく動く"
+        implication: "他者の表情をよく見る"
+      distance:
+        state: "近い"
+        implication: "親しい相手にはスキンシップ"
+      uniform_handling:
+        state: "少し着崩れる"
+        implication: "生活感・親しみ"
+
+  - name: "氷川真魚"
+    reading: "ひかわ まお"
+    role: "ヒロイン／転校生"
+    age: 16
+    attributes: ["六ッ川高校2年生", "2学期からの転校生"]
+    body: { height_cm: 164, build: "スレンダー型" }
+    personality: "転校当初は孤立。隼太が魔法者ではないかと疑い、接近する。目的は公衆の面前で暴露し社会から葬ること。"
+    outer_goal: "優等生として難関大進学を目指す（表向きは淡々）。"
+    inner_desire: "魔法者を憎み排除したい（父の件で家庭崩壊）。"
+    greatest_fear: "魔法者とその魔法。"
+    change_arc: "「消えろ」→「魔法が悪いのではない」"
+    keywords: ["敵意", "恨み", "拒絶", "見せかけの柔和さ", "孤立", "平穏への憧憬"]
+    speech_style:
+      person: "一人称＝私（発音は『わたくし』寄り）"
+      politeness: "丁寧・上品。気の強さ"
+      tempo: "均一で間を取る"
+      sentence_endings: ["ですね", "でしょう", "だわ"]
+      tics: ["疑問形で相手の反応を観察する癖"]
+    appearance_profile:
+      hair:
+        state: "黒髪ロングヘアをきつく束ねている"
+        behavior: "乱れを許さない"
+      posture:
+        state: "垂直に近い"
+        implication: "防御的"
+      gaze:
+        state: "必要なときだけ向ける"
+        implication: "見ていなくても気配で警戒"
+      distance:
+        state: "一定以上近づかない"
+        implication: "境界線を引く"
+      uniform_handling:
+        state: "正確"
+        implication: "規律・緊張"
+
+  - name: "住吉奨太郎"
+    reading: "すみよし しょうたろう"
+    role: "親友"
+    age: 17
+    attributes: ["六ッ川高校2年生", "クラスメート"]
+    body: { height_cm: 184, build: "長身で細身" }
+    personality: "陽気で楽天的。考えの浅い言動が多いが隼太を励ます。夢がコロコロ変わる。スポーツ万能。"
+    outer_goal: "楽しい学校生活。将来の夢が多すぎる。"
+    inner_desire: "想像力が性的方向へ向きがちで、少し変態的な話題が多い。"
+    change_arc: "「楽して成功」→「本気で実現」"
+    keywords: ["友情", "性的話題", "家が裕福", "楽天家", "うかつ"]
+    speech_style:
+      person: "一人称＝俺"
+      politeness: "元気。明るい。親しみ"
+      tempo: "音量大。勢い"
+      sentence_endings: ["じゃね", "じゃん", "だろ"]
+      tics: ["あけすけで裏表のない性格"]
+
+  - name: "明神明"
+    reading: "みょうじん あきら"
+    role: "政府の監視者（南関東厚生地方局）"
+    age: 29
+    attributes: ["魔法者の監視者", "公務員"]
+    body: { height_cm: 173, build: "中肉中背" }
+    personality: "魔法と魔法者のすべてを知る狂言回し。中盤以降は仲間となり、真魚の陰謀阻止や『魔法を消去する方法』再発見に関与。"
+    outer_goal: "官僚として出世し中央省庁に栄転したい。"
+    inner_desire: "現在の職務内容に不満がある。"
+    change_arc: "「監視対象」→「人間としての付き合い」"
+    keywords: ["役人根性", "生マジメ", "現状から逃げたい"]
+    speech_style:
+      person: "一人称＝私"
+      politeness: "マジメ。平凡。気の弱さ"
+      tempo: "正確。中性的"
+      sentence_endings: ["ですね", "かも", "…"]
+      tics: ["表はそつがないが、内心はプレッシャーに弱い小役人"]
+
+  - name: "諏訪公命"
+    reading: "すわ こうめい"
+    role: "ラスボス（隼太の最終ライバル）"
+    age: 19
+    attributes: ["正統館大学 政治学部2年生", "奉仕活動サークル部長（表向き）"]
+    body: { height_cm: 166, build: "小柄" }
+    personality: "幼少期に魔法が発動した天才児。正義のもとで魔法を無制限に使い理想国家を作る思想へ。同志を集め計画を練る。"
+    outer_goal: "よりよい世の中のため奉仕活動（表向き）。"
+    inner_desire: "魔法で社会改造を実現し独裁的に『ただす』。"
+    change_arc: "「知的で理性的」→「正義の独裁者」"
+    keywords: ["思いやり", "リーダーシップ", "狂信的正義感", "天下取りの野望"]
+
+  - name: "藤代アンジェリカ"
+    reading: "ふじしろ あんじぇりか"
+    role: "諏訪の腹心"
+    age: 21
+    attributes: ["正統館大学 政治学部3年生", "奉仕活動サークル書記（表向き）"]
+    body: { height_cm: 175, build: "グラマー体型" }
+    personality: "中欧×日本のハーフ女性（想定）。諏訪を信奉し忠誠を誓う。手段を選ばぬ工作で隼太に積極的アプローチ。"
+    outer_goal: "奉仕活動の運営（表向き）。"
+    inner_desire: "理想のために手段を選ばない狂信。諏訪への依存。"
+    change_arc: "「蠱惑的なお姉さん」→「狂信的テロリスト」"
+    keywords: ["セクシー", "忠誠心", "献身", "揺るがない信頼", "依存"]
+
+  - name: "高島是則"
+    reading: "たかしま これのり"
+    role: "過去の重要人物／魔法者の発見者"
+    life_span: "1851–1923"
+    attributes: ["明治12年 内務省寺社局勤務"]
+    personality: "評伝が少なく不明。ただ長年の研究の末『魔法を消去し取り除く方法』を発見していた。関東大震災で行方不明。"
+    outer_goal: "魔法者の存在を発見し政府に極秘報告、隠蔽政策に関与。"
+    inner_desire: "日本民族史に隠された魔法者を秘密裏に研究。"
+    change_arc: "「学問的興味」→「極めて危険」と結論"
+    keywords: ["研究者", "秘密のすべてを知る者", "歴史の重み", "権威"]
+
+structure:
+  base_model: "三幕構成（導入／対立／解放）"
+  inciting_incident: "魔法者の隼太と、その秘密を知るみずはの学校に転校生・真魚が現れる。"
+  turn_point: "真魚が正体を現し、魔法者を排除しようと行動する。"
+  climax: "追い詰められた隼太は、みずはを守るために魔法を使わざるを得ない。"
+  ending_policy: "静かな共存（AIには『悲劇／融和／別れ』三択で生成評価させる）"
+
+episodes:
+  EP01:
+    title: "二学期の始まり"
+    style_override: {}
+    outline:
+      - id: "EP01_SC01"
+        note: "調査報告（明神）＋日常（隼太・みずは）"
+      - id: "EP01_SC02"
+        note: "学校生活／住吉／幼少期回想のきっかけ"
+      - id: "EP01_SC03"
+        note: "幼少期回想（詳細）＋真魚転校で締め"
+      - id: "EP01_SC04"
+        note: "真魚初日フォーカス／孤立・距離／会話盗み聞きの布石"
+      - id: "EP01_SC05"
+        note: "真魚が隼太に接近開始（係決め等）／『私も魔法者』へ布石"
+      - id: "EP01_SC06"
+        note: "隼太動揺／真魚の告白をみずはに話せない（ルール）"
+      - id: "EP01_SC07"
+        note: "真魚の暴露計画の匂わせ／明神が異常の予兆を感じ始める"
+      - id: "EP01_SC08"
+        note: "バッファ（説明不足の調整用）"
+
+style_guide:
+  narrator_person: "三人称近接（隼太寄り）"
+  tense: "現在形ベース＋回想のみ過去形"
+  register: "常体。説明は最小、行動と感覚を優先"
+  sentence_length: "短文7割・中文3割。比喩は1シーン3箇所まで"
+  imagery_focus: ["手触り", "風・金属音", "夕景の色温度"]
+  dialogue_format: "会話は日本語鉤括弧、内心は（）で表記"
+  kanji_kana_ratio: "一般的なライト文芸水準（難語は注釈せず回避）"
+
+emotion_curve:
+  - phase: "導入"
+    main_emotion: "安心／緊張の芽生え"
+    value_range: [0.2, 0.4]
+    note: "日常の中の違和感を表現"
+  - phase: "展開"
+    main_emotion: "不安／怒り／衝突"
+    value_range: [0.5, 0.8]
+    note: "対立・秘密の暴露・後悔"
+  - phase: "終幕"
+    main_emotion: "決戦／受容／別れ"
+    value_range: [0.3, 0.6]
+    note: "希望を示唆する余韻で閉じる"
+
+themes_symbols:
+  statements:
+    - "『魔法』は人間の個性や才能の比喩"
+    - "『魔法の禁止』は個性や才能を発揮して他者に関わることの暗喩"
+    - "『魔法者への監視』は失敗の恐怖や他者からの非難・誹謗中傷の象徴"
+    - "これらの困難を越える鍵は『勇気』"
+    - "現代を生き抜くために『他者とのつながり』が大切"
+  motifs: ["光", "手", "記録", "記憶"]
+
+evaluation:
+  character_consistency:
+    description: "キャラの行動・発言が設定と整合しているか"
+    method: "AI出力文と設定表の照合（自動＋手動）"
+  emotion_tone:
+    description: "シーンの感情波形が設定値と一致しているか"
+    method: "AI出力から感情スコア抽出／emotion_curveとの偏差を算出"
+  world_coherence:
+    description: "魔法や監視体制のルール逸脱がないか"
+    method: "ルール違反検出プロンプト＋AI自己診断コメント"
+  theme_alignment:
+    description: "『隠すこと／守ること』および『勇気』『つながり』のモチーフが反映されているか"
+    method: "主題語出現率・セマンティック評価（embedding類似度）"

@@ -1,0 +1,134 @@
+# ==========================================================
+# EPISODE STRUCTURE DEFINITION
+# Episode: EP02
+# File: episodes/ep02_structure.yaml
+# Version: 1.0
+# Updated: 2026-02-16
+# Purpose:
+#   - EP02固有の舞台・装置・事故進行を定義する（世界本体Configに混ぜない）
+#   - ストーリー展開や台詞は規定しない（構造・制約・要素のみ）
+# ==========================================================
+
+episode:
+  id: EP02
+  structure_version: 1.0
+  status: active
+  depends_on:
+    - PROJECT_MASTER_CONTEXT@1.0
+    - MAGOSHA_COMMON_RULES@1.1
+    - CHARACTER_LAYER@1.0
+    - HUMAN_BEHAVIOR_CONSTRAINTS@1.1
+
+scope:
+  includes:
+    - locations
+    - physical_devices
+    - hazard_progression
+    - constraints_for_rescue
+  excludes:
+    - plot
+    - dialogue
+    - scene_breakdown
+    - character_emotion_design
+
+locations:
+  - id: EP02-LOC-01
+    name: "旧校舎地下（雨水槽エリア）"
+    type: "restricted_area"
+    properties:
+      - "老朽化"
+      - "立入禁止（形骸化している可能性あり）"
+      - "照明が乏しい"
+      - "湿気が強い"
+    access_points:
+      - "旧校舎側階段"
+      - "管理用通路（施錠されている場合あり）"
+
+devices:
+  - id: EP02-DEV-01
+    name: "外開きロッカー（閉鎖空間化装置）"
+    type: "improvised_confinement"
+    purpose: "対象者を一時的に隔離し、外部からの視認と介入を遅延させる"
+    constraints:
+      - "内側からの開放は困難（構造上の不利）"
+      - "完全密閉ではない（隙間・継ぎ目が存在）"
+      - "施錠・固定方法はEP02内運用に依存（詳細は実装側）"
+
+  - id: EP02-DEV-02
+    name: "流入バルブ（雨水槽への水流入制御）"
+    type: "water_inflow_control"
+    purpose: "水位変化による圧力・恐怖の演出／閉じ込めの成立補助"
+    constraints:
+      - "操作には時間差がある（即時に水位が変わるとは限らない）"
+      - "老朽化により制御が不安定になりうる"
+
+  - id: EP02-DEV-03
+    name: "雨水槽（貯留槽）"
+    type: "cistern"
+    properties:
+      - "老朽化した構造"
+      - "水位変化が起こり得る"
+      - "排水経路が限定される場合がある"
+    safety_notes:
+      - "通常運用では致命的危険を想定していない設計である可能性"
+      - "老朽化・破断・詰まり等により危険度が増大しうる"
+
+hazard_progression:
+  intent_level:
+    initial: "演出レベル（制御可能に見える）"
+    escalation: "想定外の破断・異常により生命危機へ転化"
+  stages:
+    - id: EP02-HZ-01
+      name: "閉鎖・遅延"
+      description: "対象が閉鎖空間に置かれ、外部介入が遅れる"
+      primary_risks:
+        - "発見遅延"
+        - "恐怖・パニック"
+    - id: EP02-HZ-02
+      name: "水位上昇（可視化）"
+      description: "水位が上昇し、圧迫感と危険が視覚化される"
+      primary_risks:
+        - "酸欠・低体温（環境次第）"
+        - "行動選択の狭窄"
+    - id: EP02-HZ-03
+      name: "制御逸脱（老朽化破断）"
+      description: "設備・構造の老朽化が顕在化し、制御可能性が崩れる"
+      primary_risks:
+        - "急速な危険度上昇"
+        - "予定していた安全域の崩壊"
+    - id: EP02-HZ-04
+      name: "生命危機"
+      description: "第三者が『死』を現実に想起する段階"
+      primary_risks:
+        - "溺水・外傷・二次事故"
+        - "救出遅延による不可逆結果"
+
+rescue_constraints:
+  rule: "救出は魔法を使わず物理的手段で成立させる"
+  rationale:
+    - "魔法使用は検知・記録される可能性がある（世界設定上のリスク）"
+    - "倫理的選択として『使わない』が成立する（HBC整合）"
+  allowed_actions:
+    - "物理的破壊（扉・固定具・障害物）"
+    - "器具の利用（工具・代替手段）"
+    - "人的協力（複数人での救出）"
+  prohibited_actions:
+    - "救出の主成立を魔法に依存すること"
+  notes:
+    - "実装時は『なぜ物理で成立するか』の根拠（時間・器具・構造弱点）を必ず置く"
+
+invariants:
+  - id: EP02-INV-01
+    statement: "閉鎖空間＋水位上昇の装置はEP02固有であり、世界本体Configへは移植しない"
+  - id: EP02-INV-02
+    statement: "当初は制御可能に見えるが、想定外により生命危機へ転化する"
+  - id: EP02-INV-03
+    statement: "救出は魔法ではなく物理で成立する（倫理選択の強調）"
+
+validation:
+  checklist:
+    - "装置の『演出レベル』と『生命危機』の差が段階で説明できる"
+    - "老朽化破断が発生する根拠（構造・経年・負荷）がある"
+    - "救出が物理で成立する根拠（道具・人数・弱点・時間）がある"
+    - "魔法不使用が世界設定（検知リスク）とHBC（倫理）に整合している"
+  tests: []

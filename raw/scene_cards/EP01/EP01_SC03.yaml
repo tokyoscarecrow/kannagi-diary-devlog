@@ -1,0 +1,83 @@
+﻿scene:
+  id: "EP01_SC03"
+  chapter: 1
+  seq: 3
+  title: "使ってはいけないもの"
+  date: "過去回想（隼太・6〜8歳頃）"
+  setting:
+    - "幼稚園（年長）"
+    - "病院・面談室（断片的記憶）"
+    - "下校路（住宅街・荒天）"
+
+  characters:
+    - name: "飯綱隼太（幼少期）"
+      role: "魔法が発現した子ども"
+    - name: "大神みずは（幼少期）"
+      role: "唯一の共有者／証言者"
+    - name: "隼太の両親"
+      role: "恐怖を背負う保護者"
+    - name: "正体不明の係官"
+      role: "制度の顔（名は出さない）"
+    - name: "変質者"
+      role: "危機の引き金"
+
+  goals:
+    protagonist: "『使ってはいけない力』を使う選択に至る必然を描く"
+    antagonist: "魔法の使用を禁じる社会と、救わなければ失われる命"
+    scene_question: "それでも使わなければならない瞬間は存在するのか？"
+
+  conflict:
+    internal: "魔法を使えば全てを失う恐怖 vs みずはを救いたい衝動"
+    external: "子どもでは抗えない暴力的な現実"
+
+  emotional_phase: "幸福 → 断絶 → 恐怖 → 決断 → 共有された沈黙"
+
+  scope_control:
+    include:
+      - "幼稚園での無邪気な魔法と共有の喜び（短く）"
+      - "発覚と連行の断片的記憶（説明しない）"
+      - "拉致事件での『使うと決めた瞬間』"
+      - "みずはの証言という選択"
+    exclude:
+      - "魔法の理屈・分類・強度の説明"
+      - "監視システムや検知方法"
+      - "台風による未検知の理由"
+      - "係官・省庁名・制度の詳細"
+
+  beats:
+    - id: "B1"
+      goal: "壊れる前の世界を提示"
+      action: "幼稚園での小さな魔法と笑顔"
+    - id: "B2"
+      goal: "魔法が禁忌になる瞬間"
+      action: "発覚・連行・『使ったら会えなくなる』という言葉"
+    - id: "B3"
+      goal: "日常への仮の回帰"
+      action: "小学生になり、魔法を忘れたふりをする"
+    - id: "B4"
+      goal: "選択の瞬間"
+      action: "拉致を目撃し、魔法を使う決断をする"
+    - id: "B5"
+      goal: "絆の固定"
+      action: "みずはが嘘の証言で隼太を守る"
+
+  reveal_policy:
+    level: "最小開示"
+    notes:
+      - "制度は恐怖としてのみ提示"
+      - "理屈はEP02以降で回収"
+
+  tone_style:
+    narrative_temperature: "high（感情優先）"
+    exposition_density: "low"
+    violence_portrayal: "間接描写・心理中心"
+
+  output_format: "narrative prose + inner monologue（幼少期視点）"
+  target_length: "2000〜2600字（EP01の感情的コア）"
+
+meta:
+  status: "design_fixed"
+  notes: |
+    SC03はEP01全体の感情核。
+    読者に『魔法は祝福ではないが、使わずにいられない瞬間がある』
+    という矛盾を体験させる。

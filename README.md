@@ -7,17 +7,17 @@ The project, Kannagi Diary, is an original Japanese fantasy IP currently under d
 
 Rather than publishing only story drafts, this repository exposes the structural system behind the story, including:
 
-World-building constraints
+- World-building constraints
 
-Character configuration layers
+- Character configuration layers
 
-Scene architecture design
+- Scene architecture design
 
-Tension curve modeling
+- Tension curve modeling
 
-Clinical review methodology
+- Clinical review methodology
 
-Version-controlled narrative development
+- Version-controlled narrative development
 
 Most documentation is currently in Japanese, as the IP itself is Japanese.
 However, the methodology — config-driven narrative architecture and AI-supported structural design — is language-independent.

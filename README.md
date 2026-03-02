@@ -24,13 +24,13 @@ However, the methodology — config-driven narrative architecture and AI-support
 
 This repository focuses on narrative systems, not just storytelling.
 
-Why this matters
+- Why this matters
 
-Reproducibility in narrative design
+- Reproducibility in narrative design
 
-Transparent AI collaboration
+- Transparent AI collaboration
 
-Constraint-driven story architecture
+- Constraint-driven story architecture
 
 🔽 Scroll down for Japanese documentation.
 

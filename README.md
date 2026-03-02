@@ -1,6 +1,39 @@
 # かんなぎダイアリー  
 *KANNAGI DIARY*
 
+This repository documents an ongoing experiment in AI-assisted narrative design.
+
+The project, Kannagi Diary, is an original Japanese fantasy IP currently under development.
+
+Rather than publishing only story drafts, this repository exposes the structural system behind the story, including:
+
+World-building constraints
+
+Character configuration layers
+
+Scene architecture design
+
+Tension curve modeling
+
+Clinical review methodology
+
+Version-controlled narrative development
+
+Most documentation is currently in Japanese, as the IP itself is Japanese.
+However, the methodology — config-driven narrative architecture and AI-supported structural design — is language-independent.
+
+This repository focuses on narrative systems, not just storytelling.
+
+Why this matters
+
+Reproducibility in narrative design
+
+Transparent AI collaboration
+
+Constraint-driven story architecture
+
+🔽 Scroll down for Japanese documentation.
+
 ナラティブ制作における  
 **設計・判断・レビュー工程を記録し、再現可能な形で公開する**  
 制作実験ログ兼・方法論リポジトリ。

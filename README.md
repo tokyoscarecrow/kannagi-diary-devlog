@@ -1,3 +1,4 @@
+⚠️ This repository is part of an ongoing experiment. Structures may evolve.
 # かんなぎダイアリー  
 *KANNAGI DIARY*
 

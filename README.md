@@ -117,7 +117,7 @@ Constraint-driven story architecture
 # 📖 関連リンク
 
 ### 完成した物語を読む
-📚 [かんなぎダイアリー AI生成（note）](https://note.com/tokyoscarecrow/m/m83debbbe25d4)
+📚 [かんなぎダイアリー AI生成（note）](https://note.com/tokyoscarecrow/m/mdaf36852f4c1)
 - 第一章　全８話公開中
 - YAMLファイルでコントロールしたAI生成による物語
 

@@ -5,7 +5,6 @@
 This repository documents an ongoing experiment in AI-assisted narrative design.
 
 The project, Kannagi Diary, is an original Japanese fantasy IP currently under development.
-
 Rather than publishing only story drafts, this repository exposes the structural system behind the story, including:
 
 - World-building constraints

@@ -11,6 +11,7 @@ changelog:
       - "飯縄隼太の口調を neutral 寄りに修正（住吉との差別化）"
       - "キャラクターごとの発話ルールを明文化"
       - "セリフ生成時のブレ防止のための制約を追加"
+      - "キャラクター相互の呼称を定義"
 
 # =========================================
 # MAGOSHA COMMON RULES
@@ -197,4 +198,8 @@ relation_expression:
 notes:
   - "speech_style は全シーン生成の強制制約として扱う"
   - "例外は必ずイベントとして定義する（例：真魚の敬語崩れ）"
+
+OUTPUT_FORMAT_CONSTRAINTS:
+  forbidden:
+    - "horizontal rules (---)"
 

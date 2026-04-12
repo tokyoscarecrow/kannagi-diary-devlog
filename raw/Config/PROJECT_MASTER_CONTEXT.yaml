@@ -1,0 +1,126 @@
+PROJECT_MASTER_CONTEXT:
+  meta:
+    title: "PROJECT MASTER CONTEXT"
+    project: "Kannagi Diary"
+    version: "v1.0.0"
+    role: >
+      本作品におけるテーマ原理・世界論理・物語駆動原理・トーン・禁止事項を定義する。
+      全ての構造設計・Scene Card・本文生成は本Contextに準拠する。
+
+  core_theme_principles:
+    - id: "TP-001"
+      theme: "認識のズレ"
+      description: >
+        人間の認識の不完全性とズレが、現実の解釈と行動を歪める。
+        物語の多くは、この認識差から発生する。
+    - id: "TP-002"
+      theme: "秘匿された力"
+      description: >
+        力は公開されず、隠されることで社会と共存している。
+        可視化された瞬間に秩序が崩れる。
+    - id: "TP-003"
+      theme: "管理と逸脱"
+      description: >
+        社会・組織は制御しようとし、個はそこから逸脱する。
+        その緊張が物語を生む。
+    - id: "TP-004"
+      theme: "日常と異常の共存"
+      description: >
+        異常は日常の中に埋め込まれている。
+        完全に分離された異世界構造は採用しない。
+
+  world_logic:
+    magosha:
+      definition: "特殊な力を持つ存在"
+      visibility: "基本的に秘匿される"
+      social_position: >
+        公には認識されないが、特定の組織により管理・監視されている。
+    control_structure:
+      description: >
+        国家・準国家的な組織が、魔法者の存在を把握し、
+        社会秩序維持のために監視・介入を行う。
+      principle: "全面支配ではなく、部分的制御"
+    secrecy_model:
+      rule:
+        - "一般社会は真実を知らない"
+        - "断片的な情報は存在するが体系化されない"
+        - "露見は局所的に処理される"
+
+  narrative_engine:
+    core_drivers:
+      - id: "NE-001"
+        driver: "認識の非対称性"
+        description: >
+          登場人物間で持っている情報が異なることにより、
+          誤解・対立・緊張が発生する。
+      - id: "NE-002"
+        driver: "制御と逸脱"
+        description: >
+          管理側と逸脱側の意図のズレが、衝突を生む。
+      - id: "NE-003"
+        driver: "隠された前提の露出"
+        description: >
+          物語は、隠されていた前提が露出することで転換する。
+    structural_requirements:
+      - "重要な展開は必ず認識構造と接続する"
+      - "偶然ではなく情報構造で展開を成立させる"
+
+  tone_and_identity:
+    setting_feel: "現代日本（現実寄り）"
+    atmosphere:
+      - "抑制されたサスペンス"
+      - "過剰演出を避けた緊張感"
+      - "静かな異常"
+    realism_level:
+      rule:
+        - "現実の延長線上で成立すること"
+        - "過度なファンタジー演出は禁止"
+    narrative_style:
+      - "説明過多を避ける"
+      - "観察と推測で理解させる"
+      - "情報の段階的開示"
+
+  character_principles:
+    intelligence_rule: >
+      キャラクターは状況に応じた合理的判断を行う。
+      物語都合で不自然に愚かにしない。
+    motivation_rule: >
+      行動は既存の背景・関係性・価値観から導出される。
+    relationship_rule: >
+      人間関係は固定ではなく変化するが、
+      変化には必ずトリガーが存在する。
+
+  negative_constraints:
+    forbidden:
+      - "安易な偶然解決"
+      - "情報不足による強引な展開"
+      - "キャラの知性低下による都合解決"
+      - "過剰な説明セリフ"
+      - "ジャンル的テンプレへの逃避"
+    anti_patterns:
+      - "なんとなく危機が起きる"
+      - "理由なく助かる"
+      - "説明のための説明キャラ"
+      - "演出優先で構造が破綻する"
+
+  consistency_rules:
+    - "各Sceneは必ずテーマ原理のいずれかに接続する"
+    - "構造設計はnarrative_engineに従う"
+    - "トーンはtone_and_identityから逸脱しない"
+    - "世界設定はworld_logicと整合する"
+
+  integration_note:
+    related_configs:
+      - "/config/GLOBAL_CONFIG.yaml"
+      - "/config/MAGOSHA_COMMON_RULES.yaml"
+      - "/config/CHARACTER_LAYER.yaml"
+    usage: >
+      本Contextは「参照して補う」ものではなく、
+      「逸脱していないかを検証する」ために使用する。
+
+  usage_prompt:
+    instruction: >
+      PROJECT_MASTER_CONTEXT.yaml を参照し、
+      提案・構造・本文がテーマ原理・世界論理・物語駆動原理・トーンに
+      整合しているかを確認してください。
+      不整合がある場合は修正せず指摘してください。

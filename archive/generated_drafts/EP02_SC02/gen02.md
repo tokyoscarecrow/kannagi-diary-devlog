@@ -4,7 +4,7 @@
 EP02_SC02
 
 ## 生成段階
-初稿生成（Config v2.4/ Scene Card v1）
+初稿生成（Config v2.4/ Scene Card v2）
 
 ## 採用しなかった理由（要約）
 - 主人公の行動の背景にある心理が説明されていない

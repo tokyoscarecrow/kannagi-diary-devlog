@@ -1,5 +1,309 @@
-## ç¾åœ¨ä½¿ç”¨ã—ã¦ã„ã‚‹ Config
-- config_v2.2_working.yml
-  ï¼ˆä¸–ç•Œè¦³ãƒ»äººç‰©ãƒ»ç›£è¦–ãƒ«ãƒ¼ãƒ«ãƒ»è©•ä¾¡æŒ‡æ¨™ã‚’çµ±åˆã—ãŸå®Ÿé‹ç”¨ç‰ˆï¼‰
+# Current Project State
 
-## EP01ï¼ˆç¬¬ä¸€ç« ï¼‰å…¨ï¼˜è©±å®Œæˆ
+## Overview
+
+This document defines the **current authoritative state** of the project.
+
+It provides a quick reference for:
+- Which configs are active
+- What structure is currently being worked on
+- What the project is focusing on at this stage
+
+If you are new to the repository, start here.
+
+---
+
+## Active Core Configs (Authoritative)
+
+The following files define the current system.
+
+### Top-Level (Non-negotiable)
+
+- `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
+- `raw/Config/GLOBAL_CONFIG.yaml`
+
+These define:
+- What the project is
+- How the system must behave
+
+---
+
+### Domain Configs (Active)
+
+- `raw/Config/config_v2.5.yaml`
+- `raw/Config/addressing_rules.yaml`
+
+These define:
+- Character behavior
+- World rules
+- Interaction consistency
+
+---
+
+### Structure Definition
+
+- `raw/episodes/ep02_structure.yaml`
+
+This defines:
+- Scene structure (SC)
+- Narrative progression
+- Tension design
+
+---
+
+## Current Episode Focus
+
+### EP02 (Active Development Phase)
+
+The project is currently focused on:
+
+> **Structural design and validation of Episode 02**
+
+Key elements:
+
+- Scene-based narrative architecture (SC system)
+- Structural trap design (misdirection and perception control)
+- Validation of narrative constraints through execution
+
+---
+
+## Key Design Concepts (Current Stage)
+
+### 1. Narrative as Structure
+
+Narrative is treated as:
+- A sequence of constrained units (SC)
+- Not as free-form writing
+
+---
+
+### 2. Explicit Structure Governance
+
+Scene structure is strictly controlled.
+
+- SC count, order, and role are fixed
+- Any modification requires explicit approval
+
+---
+
+### 3. Anti-Drift System
+
+To prevent degradation over long sessions:
+
+- GLOBAL_CONFIG enforces behavior
+- PROJECT_MASTER_CONTEXT anchors invariants
+- Conflicts must be reported, not silently resolved
+
+---
+
+### 4. Trap-Oriented Design (EP02)
+
+Current narrative design includes:
+
+- Intentional misdirection
+- Explicitly defined gfalse assumptionsh
+- Reader/player perception control
+
+---
+
+## Current Constraints
+
+- Structure cannot be modified without approval
+- AI operates only within defined constraints
+- All generation must respect Config hierarchy
+
+---
+
+## Status Summary
+
+- Multi-layer config system: **Active**
+- GLOBAL_CONFIG: **Implemented**
+- PROJECT_MASTER_CONTEXT: **Implemented**
+- EP02 structure: **Defined and under validation**
+- Governance rules: **In operation**
+
+---
+
+## Next Direction
+
+The project will continue focusing on:
+
+- Stabilizing long-form narrative generation
+- Expanding structural design patterns
+- Testing governance under complex scenarios
+- Integrating narrative philosophy into config systems
+
+---
+
+## Notes
+
+This document represents the **current state**, not the full history.
+
+For historical changes:
+- See `/archive`
+- See versioned config files
+
+---
+
+---
+
+# Œ»Ý‚ÌƒvƒƒWƒFƒNƒgó‘Ôi“ú–{Œê”Åj
+
+## ŠT—v
+
+–{ƒhƒLƒ…ƒƒ“ƒg‚ÍAƒvƒƒWƒFƒNƒg‚Ì**Œ»Ý‚Ì³–{ó‘Ô**‚ðŽ¦‚·B
+
+ˆÈ‰º‚ð‘f‘‚­”cˆ¬‚·‚é‚½‚ß‚ÌŽQÆ‚Å‚ ‚éF
+
+- Œ»Ý—LŒø‚ÈConfig
+- is’†‚Ì\‘¢
+- Œ»’iŠK‚ÌÅ“_
+
+‰‚ß‚Ä‚±‚ÌƒŠƒ|ƒWƒgƒŠ‚ð‰{——‚·‚éê‡‚ÍA–{ƒtƒ@ƒCƒ‹‚©‚ç“Ç‚Þ‚±‚Æ‚ð„§‚·‚éB
+
+---
+
+## —LŒø‚ÈƒRƒAConfigi³–{j
+
+Œ»Ý‚ÌƒVƒXƒeƒ€‚ð\¬‚·‚éŽå—vƒtƒ@ƒCƒ‹‚ÍˆÈ‰º‚Ì’Ê‚èB
+
+---
+
+### ÅãˆÊi•s•Ïj
+
+- `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
+- `raw/Config/GLOBAL_CONFIG.yaml`
+
+‚±‚ê‚ç‚ÍF
+
+- ƒvƒƒWƒFƒNƒg‚Ì’è‹`
+- ¶¬ƒ‹[ƒ‹‚Ì‹K—¥
+
+‚ðŒˆ’è‚·‚éB
+
+---
+
+### ƒhƒƒCƒ“Configi—LŒøj
+
+- `raw/Config/config_v2.5.yaml`
+- `raw/Config/addressing_rules.yaml`
+
+‚±‚ê‚ç‚ÍF
+
+- ƒLƒƒƒ‰ƒNƒ^[‹““®
+- ¢ŠEÝ’è
+- ‰ï˜bEŒÄÌ‚ÌˆêŠÑ«
+
+‚ð’è‹`‚·‚éB
+
+---
+
+### \‘¢’è‹`
+
+- `raw/episodes/ep02_structure.yaml`
+
+‚±‚ê‚É‚æ‚èF
+
+- ƒV[ƒ“\‘¢iSCj
+- isÝŒv
+- ƒeƒ“ƒVƒ‡ƒ“ÝŒv
+
+‚ª‹K’è‚³‚ê‚éB
+
+---
+
+## Œ»Ý‚ÌƒGƒsƒ\[ƒhÅ“_
+
+### EP02iŠJ”­’†j
+
+Œ»Ý‚ÌŽå–Ú“I‚ÍF
+
+> **Episode 02 ‚É‚¨‚¯‚é\‘¢ÝŒv‚ÆŒŸØ**
+
+Žå‚È—v‘fF
+
+- SCƒx[ƒX‚Ìƒiƒ‰ƒeƒBƒu\‘¢
+- ”F’m—U“±iƒgƒ‰ƒbƒvjÝŒv
+- §–ñ‚ÉŠî‚Ã‚­•¨Œê¶¬‚ÌŒŸØ
+
+---
+
+## Œ»Ý‚ÌÝŒvŽv‘z
+
+### 1. ƒiƒ‰ƒeƒBƒu\‘¢
+
+•¨Œê‚ÍF
+
+- §–ñ‚³‚ê‚½’PˆÊiSCj‚Ì˜A½
+
+‚Æ‚µ‚Äˆµ‚¤B
+
+---
+
+### 2. \‘¢ƒKƒoƒiƒ“ƒX
+
+ƒV[ƒ“\‘¢‚ÍŒµ–§‚ÉŠÇ—‚³‚ê‚éF
+
+- SC”E‡˜E–ðŠ„‚ÍŒÅ’è
+- •ÏX‚É‚Í–¾Ž¦“I³”F‚ª•K—v
+
+---
+
+### 3. ƒhƒŠƒtƒg–hŽ~
+
+’·Šú¶¬‚É‚¨‚¯‚é—ò‰»‘ÎôF
+
+- GLOBAL_CONFIG‚É‚æ‚é§Œä
+- PROJECT_MASTER_CONTEXT‚É‚æ‚éŒÅ’è
+- –µ‚‚Í•ñ‚·‚éi–Ù‚Á‚ÄC³‚µ‚È‚¢j
+
+---
+
+### 4. ƒgƒ‰ƒbƒvÝŒviEP02j
+
+Œ»Ý‚ÌÝŒv‚Å‚ÍF
+
+- ˆÓ}“I‚ÈŒë—U“±
+- u‰Rv‚Ì–¾•¶‰»
+- ”F’m‘€ì
+
+‚ðŠÜ‚Þ\‘¢‚ðÌ—p‚µ‚Ä‚¢‚éB
+
+---
+
+## Œ»Ý‚Ì§–ñ
+
+- \‘¢•ÏX‚Í‹ÖŽ~i³”F‚È‚µj
+- AI‚Í§–ñ“à‚Å‚Ì‚Ý“®ì
+- ‚·‚×‚Ä‚Ì¶¬‚ÍConfigŠK‘w‚É]‚¤
+
+---
+
+## ó‘Ô‚Ü‚Æ‚ß
+
+- ‘½‘wConfig\‘¢F‰^—p’†
+- GLOBAL_CONFIGF“±“üÏ‚Ý
+- PROJECT_MASTER_CONTEXTFŠm’è
+- EP02\‘¢F’è‹`Ï‚ÝEŒŸØ’†
+- ƒKƒoƒiƒ“ƒXF‰^—p’†
+
+---
+
+## ¡Œã‚Ì•ûŒü
+
+- ’·•Ò¶¬‚ÌˆÀ’è‰»
+- \‘¢ÝŒv‚ÌŠg’£
+- ƒKƒoƒiƒ“ƒX‚ÌŽÀØ
+- ƒiƒ‰ƒeƒBƒuŽv‘z‚ÌŒ`Ž®‰»
+
+---
+
+## ’‹L
+
+–{ƒhƒLƒ…ƒƒ“ƒg‚Í**Œ»Žž“_‚Ìó‘Ô**‚ðŽ¦‚·‚à‚Ì‚Å‚ ‚èA—š—ð‚Å‚Í‚È‚¢B
+
+—š—ð‚ÍˆÈ‰º‚ðŽQÆF
+
+- `/archive`
+- ŠeConfig‚Ìƒo[ƒWƒ‡ƒ“—š—ð
+

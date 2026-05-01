@@ -1,185 +1,270 @@
-⚠️ This repository is part of an ongoing experiment. Structures may evolve.
-# かんなぎダイアリー  
-*KANNAGI DIARY*
+# Kannagi Diary Devlog
 
-This repository documents an ongoing experiment in AI-assisted narrative design.
+## Narrative Design for the Age of AI
 
-The project, Kannagi Diary, is an original Japanese fantasy IP currently under development.
-Rather than publishing only story drafts, this repository exposes the structural system behind the story, including:
+This repository is not a collection of stories.
 
-- World-building constraints
-
-- Character configuration layers
-
-- Scene architecture design
-
-- Tension curve modeling
-
-- Clinical review methodology
-
-- Version-controlled narrative development
-
-Most documentation is currently in Japanese, as the IP itself is Japanese.
-However, the methodology — config-driven narrative architecture and AI-supported structural design — is language-independent.
-
-This repository focuses on narrative systems, not just storytelling.
-
-- Why this matters
-
-- Reproducibility in narrative design
-
-- Transparent AI collaboration
-
-- Constraint-driven story architecture
-
-🔽 Scroll down for Japanese documentation.
-
-ナラティブ制作における  
-**設計・判断・レビュー工程を記録し、再現可能な形で公開する**  
-制作実験ログ兼・方法論リポジトリ。
+It is an experiment in **designing narrative as a structured system**, where AI generates stories under explicitly defined constraints.
 
 ---
 
-## 📖 作品について
+## What This Project Is
 
-『かんなぎダイアリー』は、**現代日本を舞台にした学園ファンタジー**です。
+This project explores:
 
-**あらすじ（第一章）**
-特種能力者として政府の監視下にある高校生・隼太の平凡な日常に、
-転校生・真魚が現れたことで、隠された過去が動き出す──
+- Narrative as a **constraint system**
+- AI-assisted story generation with **explicit structure**
+- Long-form consistency through **config-driven design**
 
-**制作方針**
-- 物語本文は100% AI生成（人間は一文字も書かない）
-- YAMLベースのConfig駆動型生成
-- Scene Card → Tension Curve → Clinical Review の構造的プロセス
-- 成功だけでなく失敗・廃案も含めて記録公開
+Instead of writing text directly, this project defines:
+- World rules
+- Character behavior
+- Scene structure
+- Generation constraints
 
-※完成した物語は下記noteマガジンで公開中
-
----
-
-## このリポジトリは何か
-**『かんなぎダイアリー』** は、  
-オリジナル企画の制作過程において行われた
-
-- 構成設計
-- シーン分解
-- テンション設計
-- クリニカルレビュー
-
-といった **ナラティブ制作工程そのもの**を対象にした  
-**研究記録・公開ドキュメント**です。
-
-> 物語そのものではなく  
-> 「どう設計し、どう判断し、どう修正したか」を扱います。
+Stories are the result of these systems.
 
 ---
 
-## 本文（成果物）について
-本企画で制作された **完成した物語本文（成果物）** は  
-**GitHub では公開していません**。
+## Current Focus (2026)
 
-- 📖 **ブログ**：読まれるための成果物（本文）
-- 🧪 **GitHub**：その本文を生み出すための設計・判断・検証の記録
+The project is currently focused on:
 
-という役割分担を採用しています。
+### 1. Multi-layer Config System
 
----
+- `PROJECT_MASTER_CONTEXT` (What to build)
+- `GLOBAL_CONFIG` (How to build)
+- Domain configs (Detailed rules)
 
-## 公開方針（要約）
-本リポジトリは、以下を原則とします。
-
-- 成果物だけでなく、途中経過・失敗・廃案も含めて公開する
-- 後付けの成功談ではなく、実際の判断履歴を残す
-- 情報は「編集済み」と「一次資料」に分けて整理する
-
-これは完成形のノウハウ集ではなく、  
-**制作と思考のログ（メモランダム）**です。
+These ensure:
+- Stability over long sessions
+- Explicit control over narrative generation
+- Prevention of structural drift
 
 ---
 
-## Quick Start（はじめての方へ）
+### 2. Structure Governance
 
-1. **現在の推奨構成を確認する**  
-   → [`docs/00_current_state.md`](docs/00_current_state.md)
+Narrative structure is strictly controlled:
 
-2. **全体の工程と考え方を把握する**  
-   → [`docs/01_overview.md`](docs/01_overview.md)
+- Scene structure (SC) is fixed
+- Any structural modification requires explicit approval
+- No silent changes are allowed
 
-3. **関心のある工程を読む**  
-   - Config 設計 → [`docs/10_config_design.md`](docs/10_config_design.md)
-   - シーンカード → [`docs/20_scene_cards.md`](docs/20_scene_cards.md)
-   - テンション曲線 → [`docs/30_tension_curve.md`](docs/30_tension_curve.md)
-   - クリニカルレビュー → [`docs/40_clinical_review.md`](docs/90_clinical_review.md)
+This introduces **governance into AI narrative generation**.
 
 ---
 
-# 📖 関連リンク
+### 3. EP02 – Structural Trap Design
 
-### 完成した物語を読む
-📚 [かんなぎダイアリー AI生成（note）](https://note.com/tokyoscarecrow/m/mdaf36852f4c1)
-- 第一章　全８話公開中
-- YAMLファイルでコントロールしたAI生成による物語
+Episode 02 is used as a test case for:
 
-### 制作過程を知る
-🔬 [『かんなぎダイアリー』開発記（note）](https://note.com/tokyoscarecrow/m/mb2297738eabf)
-- Config設計からシーン生成までの詳細プロセス
-- 判断基準や試行錯誤の記録
+- Misdirection design
+- Perception manipulation
+- Explicitly defined narrative “lies”
 
-### 技術資料・生データ
-💾 **このGitHubリポジトリ**
-- YAMLファイル、設計ドキュメント、廃案資料など
+The goal is to design **how readers misinterpret events**.
 
 ---
 
-## 📁 ディレクトリ構成
-```
-├── docs/                              # 編集済みドキュメント（推奨読み物）
-│   ├── 00_current_state.md            # 現在の到達点・進行状況（更新点の要約）
-│   ├── 01_overview.md                 # 全体概要／制作思想／方法論サマリ
-│   │
-│   ├── 10_config_design.md            # Config設計の考え方
-│   ├── 20_scene_cards.md              # シーンカード手法の解説
-│   ├── 30_tension_curve.md             # テンション設計とEP01検証（確定）
-│   │
-│   ├── 40_clinical_review.md           # クリニカルレビュー手法（一般論）
-│   │
-│   ├── 90_ep01_review.md               # EP01 トータルレビュー（評価あり）
-│   └── 95_ep01_re_review.md            # EP01 破壊的レビュー（ダメ出しのみ）
-│
-├── raw/                               # 一次資料（生ログ・未編集・思考の源流）
-│   ├── config/                        # 現在使用している Config 最新版（YAML）
-│   ├── scene_cards/                   # 現在使用している Scene Card 最新版
-│   ├── world_foundation/              # 世界観成立の一次テキスト
-│   │   ├── world_concept_initial.md
-│   │   └── README.md
-│   ├── decision_logs/                 # 判断履歴（順序変更・方針転換など）
-│   │   ├── EP01_SC07_SC08_reorder.md
-│   │   └── README.md
-│
-├── archive/                           # 廃案・過去バージョン・比較用
-│   ├── generated_drafts/              # 採用されなかったAI生成本文
-│   ├── scene_cards/                   # 過去版シーンカード
-│   └── config/                        # 過去版Config
-│
-├── templates/                         # 再利用可能なテンプレート
-│   ├── config_template.yml            # 抽象化されたConfigテンプレ
-│   ├── scene_card_template.yml        # シーンカードテンプレ
-│   └── review_templates/              # レビュー用テンプレ群
-│
-├── characters/                        # キャラクター設定資料
-│   └── 00_characters_initial_draft.md # 最初期キャラ設定原文（一次資料）
-│
-├── diagrams/                          # 図解・構造図（任意・将来拡張）
-│   ├── narrative_flow_ep01.png
-│   └── tension_curve_ep01.png
-│
-└── README.md                          # リポジトリ総合README
+## Quick Start
 
-```
+If you are new to this repository:
+
+1. Read the current state:
+   - `docs/00_current_state.md`
+
+2. Understand the system:
+   - `docs/10_config_design.md`
+
+3. See actual structure:
+   - `raw/episodes/ep02_structure.yaml`
+
+4. Check core configs:
+   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
+   - `raw/Config/GLOBAL_CONFIG.yaml`
 
 ---
 
-## 🌐 Author
-Yoshida Ryo – Narrative Designer / Director  
-https://dailyarts.co.jp/
+## Repository Structure
+
+docs/ → Edited documentation
+raw/ → Source materials (YAML, configs, episodes)
+archive/ → Deprecated or past versions
+templates/ → Reusable templates
+
+
+---
+
+## Why This Matters
+
+Most AI-generated narratives fail because:
+
+- Constraints degrade over time
+- Structure is not enforced
+- Systems rely on memory instead of design
+
+This project addresses that by:
+
+- Designing structure first
+- Making rules explicit
+- Treating narrative as a controllable system
+
+---
+
+## Core Idea
+
+> Narrative is not written.
+>  
+> Narrative emerges from constraints.
+
+---
+
+## External Links
+
+- Devlog (Japanese): https://note.com/tokyoscarecrow/
+- LinkedIn (English summaries): https://www.linkedin.com/in/yoshidaryo/
+
+---
+
+## Status
+
+- Config system: Active
+- Governance system: Active
+- EP02: In development
+
+---
+
+# かんなぎダイアリー 開発ログ
+
+## AI時代のナラティブ設計
+
+このリポジトリは物語集ではない。
+
+これは、**物語を構造として設計する実験**である。
+
+AIは文章を書くのではなく、  
+**明示された制約のもとで物語を生成する**。
+
+---
+
+## このプロジェクトとは
+
+本プロジェクトは以下を探求する：
+
+- ナラティブ＝制約システム
+- 構造を前提としたAI生成
+- Configによる長編一貫性の維持
+
+直接テキストを書くのではなく、
+
+- 世界観
+- キャラクター
+- シーン構造
+- 生成ルール
+
+を定義し、物語を生み出す。
+
+---
+
+## 現在の焦点（2026年）
+
+### 1. 多層Config構造
+
+- PROJECT_MASTER_CONTEXT（何を作るか）
+- GLOBAL_CONFIG（どう作るか）
+- 各種ドメインConfig
+
+これにより：
+
+- 長期安定性
+- 制御可能な生成
+- 構造ドリフト防止
+
+を実現する。
+
+---
+
+### 2. 構造ガバナンス
+
+ナラティブ構造は厳密に管理される：
+
+- SC構造は固定
+- 変更は承認制
+- 無断変更は禁止
+
+AI生成に「統制」を導入する。
+
+---
+
+### 3. EP02：トラップ設計
+
+現在の主実験：
+
+- 誤誘導の設計
+- 認知操作
+- 「嘘」の構造化
+
+読者がどのように誤解するかを設計する。
+
+---
+
+## クイックスタート
+
+初めて読む場合：
+
+1. 現在状態：
+   - `docs/00_current_state.md`
+
+2. 設計思想：
+   - `docs/10_config_design.md`
+
+3. 構造：
+   - `raw/episodes/ep02_structure.yaml`
+
+4. コアConfig：
+   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
+   - `raw/Config/GLOBAL_CONFIG.yaml`
+
+---
+
+## リポジトリ構成
+
+docs/ → 編集済みドキュメント
+raw/ → YAML・構造・一次資料
+archive/ → 廃案・旧版
+templates/ → テンプレート
+
+---
+
+## なぜ重要か
+
+多くのAI生成は失敗する：
+
+- 制約が崩壊する
+- 構造が維持されない
+- 設計ではなく記憶に依存する
+
+本プロジェクトはそれを解決する。
+
+---
+
+## コアアイデア
+
+> 物語は書くものではない  
+> 制約から生成されるものである
+
+---
+
+## 外部リンク
+
+- 開発記（日本語）：https://note.com/tokyoscarecrow/
+- LinkedIn（英語）：https://www.linkedin.com/in/yoshidaryo/
+
+---
+
+## 状態
+
+- Configシステム：稼働中
+- ガバナンス：運用中
+- EP02：開発中

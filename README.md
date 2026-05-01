@@ -26,6 +26,7 @@ Stories are the result of these systems.
 
 ## System Architecture
 
+```mermaid
 flowchart TD
 
 A[PROJECT MASTER CONTEXT<br/>What to build] --> B[GLOBAL CONFIG<br/>How to build]

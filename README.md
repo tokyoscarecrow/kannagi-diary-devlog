@@ -28,29 +28,25 @@ Stories are the result of these systems.
 
 ```mermaid
 flowchart TD
+    A["PROJECT MASTER CONTEXT<br/>What to build"] --> B["GLOBAL CONFIG<br/>How to build"]
 
-A[PROJECT MASTER CONTEXT<br/>What to build] --> B[GLOBAL CONFIG<br/>How to build]
-B --> C1[MAGOSHA_COMMON_RULES]
-B --> C2[CHARACTER_LAYER]
-B --> C3[HUMAN_BEHAVIOR_CONSTRAINTS]
-B --> C4[WORLD_HISTORY_LAYER]
-B --> C5[addressing_rules]
+    B --> C1["MAGOSHA_COMMON_RULES"]
+    B --> C2["CHARACTER_LAYER"]
+    B --> C3["HUMAN_BEHAVIOR_CONSTRAINTS"]
+    B --> C4["WORLD_HISTORY_LAYER"]
+    B --> C5["addressing_rules"]
 
-C1 --> D[Scene Structure<br/>(SC System)]
-C2 --> D
-C3 --> D
-C4 --> D
-C5 --> D
+    C1 --> D["Scene Structure<br/>(SC System)"]
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    C5 --> D
 
-D --> E[EP02 Narrative Execution<br/>Trap Design / Misdirection]
+    D --> E["EP02 Narrative Execution<br/>Trap Design / Misdirection"]
 
-B --> F[Governance System]
-F --> D
-
-style A fill:#333,stroke:#fff,color:#fff
-style B fill:#555,stroke:#fff,color:#fff
-style F fill:#aa0000,stroke:#fff,color:#fff
-
+    B --> F["Governance System"]
+    F --> D
+```
 ---
 
 ## Current Focus (2026)

@@ -1,0 +1,108 @@
+scene_id: "EP02_SC10"
+title: "教室"
+time:
+  relative: "文化祭から三日後（朝）"
+location:
+  primary: "教室"
+participants:
+  - "飯綱隼太"
+  - "大神みずは"
+  - "氷川真魚"
+  - "住吉奨太郎"
+  - "クラスメイトたち"
+
+purpose:
+  story_role:
+    - "EP02後の状態固定"
+    - "真魚の学校残留の提示"
+    - "事件後の認識ズレの社会的定着"
+    - "日常空間への復帰"
+    - "EP03への接続"
+  emotional_role:
+    - "緊張からの解放"
+    - "コメディ的余韻"
+    - "未解決感の残存"
+
+structure:
+  phases:
+    - phase: "日常復帰"
+      description: "文化祭後の日常的な教室風景"
+    - phase: "異物発見"
+      description: "みずはが真魚の存在に気づく"
+    - phase: "混乱"
+      description: "みずはが真魚を問い詰める"
+    - phase: "誤認増幅"
+      description: "住吉とクラスメイトが屋上事件を恋愛的に解釈する"
+    - phase: "真相説明"
+      description: "真魚が明神の判断をみずはに説明する"
+    - phase: "固定化"
+      description: "『何事もなかったことにする』方針が示される"
+    - phase: "関係誤認"
+      description: "真魚が隼太へ親しげに接し、誤解が強化される"
+    - phase: "オチ"
+      description: "みずはが怒鳴り、周囲が面白がる"
+
+beats:
+  - order: 1
+    summary: "文化祭から三日後、日常に戻った教室が描写される"
+  - order: 2
+    summary: "みずはが隼太の隣に座る真魚を発見する"
+  - order: 3
+    summary: "みずはが真魚へ強く抗議する"
+  - order: 4
+    summary: "住吉が屋上事件を『学校公認カップル』として騒ぎ立てる"
+  - order: 5
+    summary: "クラスメイトたちが誤認を共有・固定化する"
+  - order: 6
+    summary: "真魚が退学予定だったことをみずはへ明かす"
+  - order: 7
+    summary: "明神の判断により『何事もなかったように振る舞う』方針になったと説明"
+  - order: 8
+    summary: "みずはが処理方針に絶句する"
+  - order: 9
+    summary: "真魚が隼太へ親しげに話しかける"
+  - order: 10
+    summary: "隼太が曖昧に同意する"
+  - order: 11
+    summary: "みずはが怒声を上げ、教室中の注目を集める"
+  - order: 12
+    summary: "クラスメイトたちが笑い、誤認が完全に固定される"
+
+key_information_revealed:
+  - "真魚は退学していない"
+  - "明神は事件を公に処理しない方針を選択した"
+  - "屋上事件は『恋愛イベント』として学校に定着している"
+  - "事件後も三人の関係は継続している"
+
+withheld_information:
+  - "明神の具体的権限"
+  - "真魚の今後の行動計画"
+  - "学校側が事件をどう認識しているか"
+
+tension:
+  level: "Low（残留型）"
+  score: 45
+
+tone:
+  - "コメディ"
+  - "認識ズレ"
+  - "日常への回帰"
+  - "静かな不穏"
+
+foreshadowing:
+  - "真魚の再介入"
+  - "三人の関係性変化"
+  - "社会と秘密の共存"
+
+character_notes:
+  hayata:
+    - "状況に流されつつも完全には否定できない"
+    - "曖昧な立場の継続"
+  mizuha:
+    - "最後まで納得していない"
+    - "感情的リアクションで締める"
+  mayo:
+    - "平然と日常へ復帰"
+    - "周囲の誤認を否定しない"
+  sumiyoshi:
+    - "誤認を拡散・固定化する触媒役"

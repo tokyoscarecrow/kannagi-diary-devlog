@@ -292,10 +292,18 @@ AI生成に「統制」を導入する。
 
 ## リポジトリ構成
 
-docs/ → 編集済みドキュメント
-raw/ → YAML・構造・一次資料
-archive/ → 廃案・旧版
-templates/ → テンプレート
+docs/        編集済みドキュメント
+
+raw/         YAML・Config・EP構造などの一次資料
+
+archive/     旧版・廃案
+
+templates/   再利用テンプレート
+
+characters/  キャラクター関連資料
+
+diagrams/    図解
+
 
 ---
 

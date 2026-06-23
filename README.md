@@ -111,11 +111,13 @@ If you are new to this repository:
 
 ## Repository Structure
 
-docs/ → Edited documentation
-raw/ → Source materials (YAML, configs, episodes)
-archive/ → Deprecated or past versions
-templates/ → Reusable templates
-
+```text
+docs/        Edited documentation and design notes
+raw/         Source materials: configs, YAML files, episode structures
+archive/     Deprecated versions, rejected drafts, generated drafts
+templates/   Reusable templates for configs and scene cards
+characters/  Character-related reference materials
+diagrams/    System and narrative structure diagrams
 
 ---
 

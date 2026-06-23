@@ -111,7 +111,6 @@ If you are new to this repository:
 
 ## Repository Structure
 
-```text
 docs/        Edited documentation and design notes
 raw/         Source materials: configs, YAML files, episode structures
 archive/     Deprecated versions, rejected drafts, generated drafts

@@ -90,6 +90,22 @@ The goal is to design **how readers misinterpret events**.
 
 ---
 
+### 4.Relation Expression Layer
+
+The project now separates character addressing rules into an independent file:
+
+- `addressing_rules.yaml`
+
+This layer manages:
+
+- character-to-character forms of address
+- honorifics and psychological distance
+- event-triggered changes in how characters call each other
+
+This prevents dialogue drift during AI-assisted generation.
+
+---
+
 ## Quick Start
 
 If you are new to this repository:

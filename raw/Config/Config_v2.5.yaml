@@ -1,4 +1,4 @@
-﻿config_version: "v2.5"
+config_version: "v2.5"
 last_updated: "2026-03-23"
 
 # =========================================
@@ -8,7 +8,7 @@ changelog:
   - version: "v2.5"
     changes:
       - "speech_style を CHARACTER_LAYER に追加"
-      - "飯縄隼太の口調を neutral 寄りに修正（住吉との差別化）"
+      - "飯綱隼太の口調を neutral 寄りに修正（住吉との差別化）"
       - "キャラクターごとの発話ルールを明文化"
       - "セリフ生成時のブレ防止のための制約を追加"
       - "キャラクター相互の呼称を定義"
@@ -42,18 +42,18 @@ HUMAN_BEHAVIOR_CONSTRAINTS:
 CHARACTER_LAYER:
 
   # -------------------------
-  # 飯縄隼太
+  # 飯綱隼太
   # -------------------------
-  hayata:
+  izuna_shunta:
     role: "主人公 / 調停者"
     core_traits:
       - "受動的"
       - "状況判断型"
       - "他者を優先する"
     relationships:
-      mizuha: "幼なじみ / 無自覚に特別視"
-      mayo: "警戒と興味が混在"
-      myojin: "監視官 / 面倒な大人"
+      omiwa_mizuha: "幼なじみ / 無自覚に特別視"
+      hikawa_mao: "警戒と興味が混在"
+      myojin_akira: "監視官 / 面倒な大人"
     speech_style:
       tone: "neutral_casual"
       traits:
@@ -74,15 +74,15 @@ CHARACTER_LAYER:
   # -------------------------
   # 大神みずは
   # -------------------------
-  mizuha:
+  omiwa_mizuha:
     role: "ヒロイン / 感情ドライバー"
     core_traits:
       - "直情型"
       - "独占欲"
       - "行動が先に出る"
     relationships:
-      hayata: "強い執着 / 無自覚な恋愛感情"
-      mayo: "対抗意識"
+      izuna_shunta: "強い執着 / 無自覚な恋愛感情"
+      hikawa_mao: "対抗意識"
     speech_style:
       tone: "emotional"
       traits:
@@ -100,15 +100,15 @@ CHARACTER_LAYER:
   # -------------------------
   # 氷川真魚
   # -------------------------
-  mayo:
+  hikawa_mao:
     role: "対立軸 / 観察者"
     core_traits:
       - "孤立"
       - "内面に強い目的を持つ"
       - "他者との距離がある"
     relationships:
-      hayata: "利用対象 → 変化対象（EP02以降）"
-      mizuha: "対立存在"
+      izuna_shunta: "利用対象 → 変化対象（EP02以降）"
+      omiwa_mizuha: "対立存在"
     speech_style:
       tone: "polite"
       traits:
@@ -128,14 +128,14 @@ CHARACTER_LAYER:
   # -------------------------
   # 住吉
   # -------------------------
-  sumiyoshi:
+  sumiyoshi_shotaro:
     role: "コメディ / 撹乱役"
     core_traits:
       - "軽薄"
       - "空気をかき回す"
       - "対人距離が近い"
     relationships:
-      hayata: "友人 / 振り回され役"
+      izuna_shunta: "友人 / 振り回され役"
     speech_style:
       tone: "casual_comedic"
       traits:
@@ -154,14 +154,14 @@ CHARACTER_LAYER:
   # -------------------------
   # 明神明
   # -------------------------
-  myojin:
+  myojin_akira:
     role: "監視者 / 制度の代弁者"
     core_traits:
       - "事務的"
       - "感情が薄い"
       - "規則優先"
     relationships:
-      hayata: "監視対象 / 定期面接相手"
+      izuna_shunta: "監視対象 / 定期面接相手"
     speech_style:
       tone: "formal_flat"
       traits:
@@ -202,4 +202,3 @@ notes:
 OUTPUT_FORMAT_CONSTRAINTS:
   forbidden:
     - "horizontal rules (---)"
-

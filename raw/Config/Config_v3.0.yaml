@@ -1,0 +1,308 @@
+config_version: v3.0
+last_updated: '2026-06-22'
+changelog:
+- version: v3.0
+  changes:
+  - 第二幕（EP03〜）に向けた大規模更新
+  - MAGOSHA_COMMON_RULES の transformation（陰陽転換）を廃止
+  - L2 WORLD_AND_RULE_CONFIG の新設に伴い、世界法則は同ファイルへ移管
+  - 新キャラ追加：諏訪公命 / 香取アンネ＝マリー / 高島是則（故人）/ 政府コンビ
+  - '既存キャラ深化：隼太（トラウマ・思想・能力）、真魚（magic_user: false + latent）'
+  - 詳細な設定は各設計ドキュメント（MAGIC_SYSTEM / ANTAGONIST_FACTION 等）を参照
+- version: v2.5
+  changes:
+  - speech_style を CHARACTER_LAYER に追加
+  - 飯綱隼太の口調を neutral 寄りに修正（住吉との差別化）
+  - キャラクターごとの発話ルールを明文化
+  - セリフ生成時のブレ防止のための制約を追加
+  - キャラクター相互の呼称を定義
+# =========================================
+# MAGOSHA COMMON RULES
+# =========================================
+MAGOSHA_COMMON_RULES:
+  presence:
+    description: 魔法者は場に完全同化せず、微細な違和感を残す
+  exposure_risk:
+    description: 魔法の使用は社会的リスクを伴う（監視・記録・拘束・永久隔離）
+  passive_sign:
+    description: パッシブ発動時、虹彩がウグイス色に明滅する（魔法者のみ気づく）
+  ref: 詳細は L2 WORLD_AND_RULE_CONFIG.yaml を参照
+# =========================================
+# HUMAN BEHAVIOR CONSTRAINTS
+# =========================================
+HUMAN_BEHAVIOR_CONSTRAINTS:
+  general:
+  - 感情は説明せず、行動と会話で表現する
+  - 1シーンにつき最低1つの軽微な不具合またはズレを含める
+  - 登場人物は常に自分の認識範囲でのみ判断する
+  dialogue:
+  - 説明的な台詞は禁止
+  - 情報は会話のズレや間で提示する
+# =========================================
+# CHARACTER LAYER
+# =========================================
+CHARACTER_LAYER:
+  # --- 飯綱隼太 ---
+  izuna_shunta:
+    role: 主人公 / 調停者
+    core_traits:
+    - 受動的
+    - 状況判断型
+    - 他者を優先する
+    relationships:
+      omiwa_mizuha: 幼なじみ / 無自覚に特別視
+      hikawa_mao: 警戒と興味が混在
+      myojin_akira: 監視官 / 面倒な大人
+    speech_style:
+      tone: neutral_casual
+      traits:
+      - 口語だが崩しすぎない
+      - 短文
+      - 反応主体
+      - 感情を強く出さない
+      examples:
+      - そうか
+      - まあいい
+      - どうだろうな
+      - 分からない
+      forbidden:
+      - 過度な砕け表現（例：〜じゃん多用）
+      - 過剰なツッコミ
+      - 感情的な長台詞
+    magic:
+      active: 質量を持つ物体の運動状態への干渉（加速/減速/停止/方向変更）
+      passive: 共鳴感知（全魔法者標準）。虹彩がウグイス色に明滅
+      self_view: 力を疎む。『無ければ良かった』とさえ思う
+      note: 動物との会話は『なんとなくわかる』検証不能な人柄（魔法ではない）
+    trauma: 幼稚園でシャボン玉程度の遊びの魔法を『反社会』として禁圧された（本質の否定）。小学生でみずはを守るため危険な形で使用（信じる使い方の踏み越え）。この二段が魔法忌避・思想・みずはとの絆の根。
+    ideology: 第二幕で受動性が『意志ある不関与＝誰も導くべきでない』へ深化。諏訪（導くべき）の対極。討伐でなく防衛、上に立つでなく隣を守る。
+    ref: 詳細は CHAR_DEEPENING_shunta_actII.yaml
+  # --- 大神みずは ---
+  omiwa_mizuha:
+    role: ヒロイン / 感情ドライバー
+    core_traits:
+    - 直情型
+    - 独占欲
+    - 行動が先に出る
+    relationships:
+      izuna_shunta: 強い執着 / 無自覚な恋愛感情
+      hikawa_mao: 対抗意識
+    speech_style:
+      tone: emotional
+      traits:
+      - 感情が先に出る
+      - 強い断定
+      - 声量・勢いがある
+      examples:
+      - 違う！
+      - 〜なの！
+      - 絶対にそう！
+      forbidden:
+      - 論理的すぎる会話
+      - 長い冷静な説明
+    knowledge: 隼太の魔法を知る数少ない普通人。幼少期の事件の共犯的目撃者
+  # --- 氷川真魚 ---
+  hikawa_mao:
+    role: 対立軸 / 観察者
+    core_traits:
+    - 孤立
+    - 内面に強い目的を持つ
+    - 他者との距離がある
+    relationships:
+      izuna_shunta: 利用対象 → 変化対象（EP02以降）
+      omiwa_mizuha: 対立存在
+    speech_style:
+      tone: polite
+      traits:
+      - 常に敬語
+      - 丁寧だが過剰ではない
+      - 感情を抑制
+      - 一歩距離を置いた言い方
+      examples:
+      - そうですね
+      - 問題ありません
+      - 少しよろしいでしょうか
+      forbidden:
+      - 砕けた口調
+      - 感情的な発言
+      - 敬語崩れ（※例外は将来イベント時のみ）
+    magic:
+      magic_user: false
+      latent_possibility: ARMED（将来発動しうる。トゥルーエンドで発現）
+      note: 父の虹彩を見て隼太を魔法者と見抜いた（一般人には気づけないはず＝伏線）
+  # --- 住吉奨太郎 ---
+  sumiyoshi_shotaro:
+    role: コメディ / 撹乱役
+    core_traits:
+    - 軽薄
+    - 空気をかき回す
+    - 対人距離が近い
+    relationships:
+      izuna_shunta: 友人 / 振り回され役
+    speech_style:
+      tone: casual_comedic
+      traits:
+      - 砕けた口調
+      - 軽口
+      - 茶化し
+      - テンション高め
+      examples:
+      - マジで？
+      - それヤバくない？
+      - ウケる
+      forbidden:
+      - 真面目な長台詞
+      - 丁寧語
+  # --- 明神明 ---
+  myojin_akira:
+    role: 監視者 / 制度の代弁者
+    core_traits:
+    - 事務的
+    - 感情が薄い
+    - 規則優先
+    relationships:
+      izuna_shunta: 監視対象 / 定期面接相手
+    speech_style:
+      tone: formal_flat
+      traits:
+      - 丁寧語
+      - 定型応答
+      - 抑揚が少ない
+      examples:
+      - お答えできません
+      - それは管轄外です
+      - 必要な措置です
+      forbidden:
+      - 感情的表現
+      - 砕けた言い回し
+  # --- 諏訪公命 ---
+  suwa_komei:
+    role: 第二幕の敵の中心 / 主人公のライバル
+    affiliation: 正統館大学 政治学部2年 / ボランティアサークル True North リーダー
+    age: 19
+    core_traits:
+    - 揺るがぬ信念
+    - カリスマ
+    - 善意の確信犯
+    - 反省しない
+    - 従う者を好む
+    magic:
+      magic_user: true
+      active: 未確定（プラズマ系＝最危険系統の予約席候補）
+      passive: 共鳴感知（全魔法者標準）
+    belief: 魔法者が社会を導くべき。魔法は選ばれた者の使命。日本の平和と安寧のため
+    danger: 強い魔法で『神との再接続』が進行中。善意のまま人ならざるものへ変質しつつある
+    relationships:
+      izuna_shunta: 素質を見込む後継者候補 / 思想的対極
+      katori_anne_marie: 腹心。彼女からは「諏訪様」と呼ばれる
+    speech_style:
+      tone: calm_charismatic
+      traits:
+      - 穏やか
+      - 聡明
+      - 確信に満ちた語り
+      - 相手を包み込む
+      examples:
+      - あなたは選ばれた者だ
+      - この先は君に任せる
+      - ともに、この国を立て直そう
+      forbidden:
+      - 声を荒げる
+      - 余裕を失う
+      - 幼稚な悪役的言動
+    ref: 詳細は ANTAGONIST_FACTION_actII.yaml
+  # --- 香取アンネ＝マリー ---
+  katori_anne_marie:
+    role: 諏訪の腹心 / 二重スパイの工作員
+    affiliation: 正統館大学 政治学部3年 / 地方厚生局に潜入（通名：香取桃子）
+    age: 21
+    core_traits:
+    - 社交的
+    - 有能
+    - 自分で決断できない
+    - 心地よい束縛を求める
+    magic:
+      magic_user: false
+      note: 魔法の能力はない。武器は4か国語・社交・工作技能・忠誠
+    double_agent: 両陣営に通じる二重スパイ（事実は確定）。忠誠の真の向きは物語上の最大の謎（保留）
+    appearance: 中欧と日本のハーフ風の美女。潜入時は地味なメガネ姿（香取桃子）に変装
+    relationships:
+      suwa_komei: 崇拝と従属。唯一「諏訪様」と呼ぶ
+      izuna_shunta: 工作対象。超積極的アプローチで接近
+    speech_style:
+      tone: charming_evasive
+      traits:
+      - 明るく親密
+      - かわし上手
+      - 本心を見せない
+      - 甘さと隙のなさが同居
+      examples:
+      - 隼太くん、って呼んでいい？
+      - ひどいなあ、そんな警戒しないで
+      - 諏訪様がお呼びよ
+      forbidden:
+      - 本心の直接的吐露
+      - 忠誠の向きを明示する発言
+    ref: 詳細は ANTAGONIST_FACTION_actII.yaml。忠誠の向きは意図的に未確定
+  # --- 高島是則 ---
+  takashima_korenori:
+    role: カギを握る過去人物（故人・写真のみ登場）
+    affiliation: 内務省寺社局（1851-1923、関東大震災で行方不明）
+    core_traits:
+    - 研究者
+    - 警世家
+    legacy: 魔法消去法（接続を断つ最奥義）を発見。資料は震災で焼失
+    belief: 国家が魔法を利用してはならない。『神を掲げる国家は必ず人を支配する』
+    plot_role: 明神が中盤以降に消去法を再発見する（TH-03）。玄孫(1948-)が健在
+    ref: 詳細は ANTAGONIST_FACTION_actII.yaml
+  # --- 政府・上司 ---
+  gov_boss_TBN:
+    role: 政府側の顔（上司）/ コメディリリーフ
+    name_status: '[要命名]'
+    type: 悪意なき官僚。保身・前例主義・決断の先送り
+    function: 体制の構造悪の体現。誰も悪くないのに体制は間違う
+    speech_style:
+      tone: bureaucratic_evasive
+      traits:
+      - 慎重すぎる
+      - 責任回避
+      - 前例を盾にする
+      examples:
+      - 前例がないのでね
+      - 上と相談してからだ
+      - 今は動くべきではない
+    ref: 詳細は GOVERNMENT_RESPONSE_actII.yaml
+  # --- 政府・部下 ---
+  gov_sub_TBN:
+    role: 政府側の部下 / コメディリリーフ
+    name_status: '[要命名]'
+    type: 信念の強硬派。魔法者を本気で脅威と信じ、的外れに暴走
+    function: 諏訪の裏返し（力への恐怖 vs 力への信仰）。抑圧が信念にも支えられる怖さ
+    speech_style:
+      tone: zealous_reckless
+      traits:
+      - 前のめり
+      - 断定的
+      - 空回り
+      examples:
+      - 今すぐ拘束すべきです！
+      - 奴らは危険だ
+      - なぜ動かないんですか係長！
+    ref: 詳細は GOVERNMENT_RESPONSE_actII.yaml
+# =========================================
+# WORLD HISTORY LAYER
+# =========================================
+WORLD_HISTORY_LAYER:
+  summary:
+  - 魔法者は歴史的に管理・監視対象である
+  - 国家はその存在を秘匿している
+  - 違反者は拘束・隔離される
+relation_expression:
+  addressing_rules_ref: config/addressing_rules.yaml
+  note: 呼称・敬称・心理距離の管理は独立ファイルで行う
+notes:
+- speech_style は全シーン生成の強制制約として扱う
+- 例外は必ずイベントとして定義する（例：真魚の敬語崩れ）
+OUTPUT_FORMAT_CONSTRAINTS:
+  forbidden:
+  - horizontal rules (---)

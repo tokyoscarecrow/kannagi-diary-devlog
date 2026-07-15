@@ -1,0 +1,98 @@
+scene_id: "EP03_SC01"
+title: "オープンキャンパス"
+
+time:
+  relative: "10月末"
+  part_of_day: "日中"
+location:
+  primary: "正統館大学キャンパス（オープンキャンパス開催中）"
+  secondary: "サークル説明会 True North ブース"
+
+participants:
+  - "飯綱隼太"
+  - "大神みずは"
+  - "香取アンネ＝マリー"
+  - "氷川真魚（物陰・台詞なし）"
+
+purpose:
+  story_role:
+    - "第二幕の日常的な開幕。敵地への無防備な訪問"
+    - "香取アンネ＝マリーとの初接触（ただし敵とは分からせない）"
+    - "真魚を不穏な形で再登場させ、第二幕の主軸であることを予告する"
+  emotional_role:
+    - "進路見学の明るい日常"
+    - "コメディ（香取の過剰接触にみずはが怒る）"
+    - "ラストで日常から不穏へ落とす"
+
+structure:
+  phases:
+    - phase: "日常"
+      description: "キャンパス見学。進路の話、軽口。隼太の諦観がさりげなく出る"
+    - phase: "コメディ"
+      description: "香取が隼太に過剰接触。みずはが怒る。香取は余裕でかわす"
+    - phase: "転調"
+      description: "帰り際、物陰から二人を見ている真魚"
+
+beats:
+  - order: 1
+    summary: "隼太とみずはがオープンキャンパスに来て、キャンパスを見て回る"
+  - order: 2
+    summary: "進路の話。隼太の『そこそこの人生でいい』という諦観がさりげなく出る"
+  - order: 3
+    summary: "サークル説明会で、ボランティアサークル True North のブースを見つける"
+  - order: 4
+    summary: "香取アンネ＝マリーが隼太に過剰接触。距離が近く、褒めちぎる"
+  - order: 5
+    summary: "みずはが怒る。だが香取は柔らかくかわし、余裕すら見せる"
+  - order: 6
+    summary: "隼太は困惑しつつ悪い気はしていない（それがみずはの怒りを煽る）"
+  - order: 7
+    summary: "帰り際、物陰から二人を見ている真魚の姿"
+
+cliffhanger:
+  hook: "物陰から隼太とみずはを見ている真魚。何かが起きそうな予感で終わる"
+  type: "不穏の予感"
+
+key_information_revealed:
+  - "True North というボランティアサークルが存在する"
+  - "香取アンネ＝マリーが隼太に強い関心を持って接近している"
+  - "真魚が隼太を見張っている（読者に予告）"
+withheld_information:
+  - "True North の正体（魔法者結社）"
+  - "香取が隼太を狙う理由（盗まれた記録で『要注目』として浮かんでいる）"
+  - "真魚が何を狙っているか"
+
+tension:
+  level: "Low → Mid"
+  score_start: 20
+  score_end: 45
+
+tone:
+  - "明るい"
+  - "日常的"
+  - "コメディ"
+  - "ラストの不穏"
+
+foreshadowing:
+  - "香取の接近は偶然ではない（後に判明）"
+  - "真魚の尾行（第二幕の主軸の予告）"
+
+character_notes:
+  izuna_shunta:
+    - "受動的。流されるが、悪い気はしていない。諦観をさりげなく"
+  omiwa_mizuha:
+    - "隼太への独占感情が嫉妬として出る。香取に敵意を向けるが、かわされる"
+  katori_anne_marie:
+    - "明るく親密、かわし上手。本心を見せない。『隼太くん』と親しげに呼ぶ"
+    - "忠誠の向きを匂わせる発言は絶対にしない（Config forbidden 準拠）"
+  hikawa_mao:
+    - "物陰から監視。台詞なし。存在感だけを残す"
+
+meta:
+  depends_on:
+    - "WORLD_AND_RULE_CONFIG@1.0.0"
+    - "Config@3.0"
+    - "addressing_rules@1.0"
+    - "ep03_structure@1.0"
+  review_status: "draft"
+  schema_version: "1.1.0"

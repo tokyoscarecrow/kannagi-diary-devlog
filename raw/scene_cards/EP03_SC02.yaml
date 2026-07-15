@@ -1,0 +1,86 @@
+scene_id: "EP03_SC02"
+title: "True North"
+
+time:
+  relative: "SC01と同日、または後日"
+  part_of_day: "日中"
+location:
+  primary: "正統館大学キャンパス / True North ブースまたは活動紹介の場"
+
+participants:
+  - "飯綱隼太"
+  - "大神みずは"
+  - "香取アンネ＝マリー"
+
+purpose:
+  story_role:
+    - "組織の表層（健全さ）を提示し、読者を油断させる"
+    - "香取の勧誘の執拗さと、その不自然な熱意を見せる"
+    - "『リーダーに会ってみないか』という次への引きを作る"
+  emotional_role:
+    - "善意と健全さの空気（True Northの表の顔）"
+    - "みずはの警戒と、隼太の困惑の継続"
+
+structure:
+  phases:
+    - phase: "紹介"
+      description: "True Northの活動実績・善意・集まる学生たちの健全さが描かれる"
+    - phase: "勧誘"
+      description: "香取の接触は執拗。隼太への関心が過剰であることが際立つ"
+    - phase: "誘い"
+      description: "『リーダーに会ってみませんか』という誘いが差し出される"
+
+beats:
+  - order: 1
+    summary: "True Northの活動が紹介される。地域ボランティア、災害支援などの実績"
+  - order: 2
+    summary: "集まる学生たちの善意と健全さ。サークルは魅力的に見える"
+  - order: 3
+    summary: "香取の勧誘が続く。隼太への関心は明らかに過剰"
+  - order: 4
+    summary: "みずはが警戒を強める。だが香取はやはりかわす"
+  - order: 5
+    summary: "香取が『リーダーに会ってみませんか』と誘う"
+
+cliffhanger:
+  hook: "『リーダーに会ってみませんか』——その誘いに、隼太が惹かれかける。あるいは真魚の尾行が続いていることの示唆"
+  type: "誘いへの傾き / 不穏の継続"
+
+key_information_revealed:
+  - "True Northは表向き、実績のある健全なボランティアサークルである"
+  - "香取の隼太への関心は、通常の勧誘の域を超えている"
+withheld_information:
+  - "サークルが『洗脳装置・兵隊育成の場』であること"
+  - "健全な外円の内側に、魔法者結社の内円があること"
+
+tension:
+  level: "Mid"
+  score_start: 40
+  score_end: 45
+
+tone:
+  - "健全"
+  - "善意の空気"
+  - "その裏のかすかな作為"
+
+foreshadowing:
+  - "サークルの『健全さ』そのものが、後に反転する（洗脳・兵隊育成の隠れ蓑）"
+  - "香取の過剰な関心の理由（盗まれた記録）"
+
+character_notes:
+  izuna_shunta:
+    - "サークルの善意に、少し心を動かされる。だが決めきれない"
+  omiwa_mizuha:
+    - "警戒を崩さない。香取への不信が募る"
+  katori_anne_marie:
+    - "健全さを演じきる。勧誘は柔らかいが執拗。本心は見せない"
+
+meta:
+  depends_on:
+    - "WORLD_AND_RULE_CONFIG@1.0.0"
+    - "Config@3.0"
+    - "addressing_rules@1.0"
+    - "ep03_structure@1.0"
+  review_status: "draft"
+  schema_version: "1.1.0"
+  note: "組織の真の性質（ANTAGONIST_FACTION）は本文で明かさない。健全な表層のみ描く"

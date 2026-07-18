@@ -93,22 +93,42 @@
   キー構成が完全一致。**内容・構造の変更はなし**（文字コードと改行コードのみ）
 - リポジトリ全体スキャン結果：**残存 CP932 = 0件 / UTF-8 = 96件**
 
+#### 依存参照の追従（Config@3.0 → Config@3.1）
+
+- 正本が v3.1 であるにもかかわらず `depends_on` が v3.0 を指していた4ファイルを修正
+  - `raw/episodes/ep03_structure.yaml`
+  - `raw/scene_cards/EP03/EP03_SC01.yaml`
+  - `raw/scene_cards/EP03/EP03_SC02.yaml`
+  - `raw/scene_cards/EP03/EP03_SC03.yaml`
+- `raw/episodes/OLD/ep03_structure.yaml` は履歴保持領域のため意図的に未改変
+
+#### docs/00_current_state.md の全面更新
+
+- 記載内容が2世代分（v2.5 / EP02時点）古かったため現状へ同期
+- 追加：L0〜L5 レイヤー構成表、WORLD_AND_RULE_CONFIG（L2）、
+  SCENE_CARD_TEMPLATE v1.1.0、EP03の構造条件、規約節、既知の課題節
+- 修正：有効ドメインConfigを `Config_v3.1.yaml` へ（旧記載は `config_v2.5.yaml`。
+  実ファイル名と大小文字も不一致だった）
+- 修正：現在の焦点を EP02 → EP03（第二幕・前半）へ
+
 ### 📋 Notes
 
 - EP02 シーンカードのラップ形式混在は未解消（テンプレv1.1.0 が指摘した既知事項）
   - `scene:[]` ラップ：SC01, SC02
   - `scenes:[]` ラップ：SC03
   - flat：SC04〜SC10
-  - 今回の変換では形式統一は行っていない（文字コード変換の範囲外）
+  - 残る移行対象は SC01〜SC03 の3枚のみ
 
 ### ⚠️ Known Issues
 
-- `ep03_structure.yaml` の `depends_on` は `Config@3.0` を指す。正本は v3.1 のため、
-  次回更新時に `Config@3.1` へ追従させる
-- `docs/00_current_state.md` の記載内容が実体と不一致（UTF-8化のみ実施済・内容は未更新）
-  - 有効ドメインConfigを `config_v2.5.yaml` と記載（実体は v3.1）
-  - ファイル名の大小文字も不一致（実体は `Config_v2.5.yaml`）
-  - 現在の焦点を EP02 と記載（実体は EP03）
+- **`raw/scene_cards/EP01/EP01_SC08.yaml` が YAML 構文エラー（既存の破損）**
+  - 適用されなかった差分（diff）がファイル内に貼り付けられたまま残存
+  - 該当：L36–37, L42–43, L71, L74–77（計9行）
+  - 症状：`- description:`（マッピング配下の不正なリスト記号）、
+    行頭の `+` 差分マーカー、全角スペースの混入
+  - `+` 行が採用予定の改訂内容と見られるが、**本文設計上の判断を伴うため未修正**
+  - 影響：本ファイルのみ機械的に読み取り不能。他32件のYAMLは正常
+- `raw/Config/README.md` の版別解説は v2.5 までで、v3.0／v3.1 の項目が未記載
 
 ---
 

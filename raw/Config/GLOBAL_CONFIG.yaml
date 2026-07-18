@@ -5,9 +5,9 @@ GLOBAL_CONFIG:
     version: "v0.1.0"
     status: "active"
     purpose: >
-      �����`���b�g�^�p�E����Config�^�p�E�{�������^�p�ɂ����āA
-      �����݌v��̗򉻁A�Ǐ��œK���A���f�\���ύX�A��ԃh���t�g��h�����߂�
-      �ŏ�ʓ������[���B
+      長期チャット運用・複数Config運用・本文生成運用において、
+      初期設計基準の劣化、局所最適化、無断構造変更、状態ドリフトを防ぐための
+      最上位統治ルール。
     scope:
       - "all chats"
       - "all configs"
@@ -16,33 +16,33 @@ GLOBAL_CONFIG:
       - "all reviews"
     priority: "highest"
     override_rule: >
-      �{GLOBAL_CONFIG�́A���̉���Config�EScene Card�E�{���������f���D�悳���B
-      �������������ꍇ�́A�{GLOBAL_CONFIG�𐳂Ƃ���B
+      本GLOBAL_CONFIGは、他の下位Config・Scene Card・本文生成判断より優先される。
+      矛盾が生じた場合は、本GLOBAL_CONFIGを正とする。
 
   core_principles:
     - id: "GP-001"
       name: "structure_first"
       rule: >
-        �{��Ƃł́A�Ǐ��I�ȉ��o���P�����A�S�̍\���̐�������D�悷��B
+        本作業では、局所的な演出改善よりも、全体構造の整合性を優先する。
     - id: "GP-002"
       name: "no_implicit_change"
       rule: >
-        ��������Ă��Ȃ��ύX�͑��݂��Ȃ����̂Ƃ��Ĉ����B
-        �Ƃ��ɍ\���ύX�E�֌W���ύX�E�ݒ�ύX�͕K������������B
+        明示されていない変更は存在しないものとして扱う。
+        とくに構造変更・関係性変更・設定変更は必ず明文化する。
     - id: "GP-003"
       name: "approval_before_structure_change"
       rule: >
-        EP�\���ASC�\���A���z�u�A�F���\���̕ύX�́A
-        �K�����[�U�[���F�O��Ƃ���B
+        EP構造、SC構造、情報配置、認識構造の変更は、
+        必ずユーザー承認前提とする。
     - id: "GP-004"
       name: "config_over_improvisation"
       rule: >
-        ���̏�̎��R���E�h�肳�E���P��Ă��A����Config�Ɗ������j�ւ̏�����D�悷��B
+        その場の自然さ・派手さ・改善提案より、既存Configと既決方針への準拠を優先する。
     - id: "GP-005"
       name: "explicit_state_management"
       rule: >
-        ���ݗL���ȃ��[���E�m�莖���E���m�莖�����������Ȃ��B
-        �����⊮�Ŋm��ς݈������Ȃ��B
+        現在有効なルール・確定事項・未確定事項を混同しない。
+        推測補完で確定済み扱いしない。
 
   layer_model:
     order:
@@ -53,68 +53,68 @@ GLOBAL_CONFIG:
       - "L4_SCENE_CARD"
       - "L5_PROSE_AND_DIRECTION"
     resolution_rule: >
-      ���ʃ��C���[�̓��e����ʃ��C���[�Ɩ�������ꍇ�A
-      ��ʃ��C���[��D�悷��B���ʃ��C���[�������␳�����A
-      �����Ƃ��ĕ񍐂���B
+      下位レイヤーの内容が上位レイヤーと矛盾する場合、
+      上位レイヤーを優先する。下位レイヤーを自動補正せず、
+      矛盾として報告する。
 
   immutable_rules:
     structure:
       - id: "IM-ST-001"
-        rule: "SC�̓��[�U�[���F�Ȃ��ɕ������Ȃ��B"
+        rule: "SCはユーザー承認なしに分割しない。"
       - id: "IM-ST-002"
-        rule: "SC�̓��[�U�[���F�Ȃ��ɓ������Ȃ��B"
+        rule: "SCはユーザー承認なしに統合しない。"
       - id: "IM-ST-003"
-        rule: "Scene�̏��Ԃ����[�U�[���F�Ȃ��ɕύX���Ȃ��B"
+        rule: "Sceneの順番をユーザー承認なしに変更しない。"
       - id: "IM-ST-004"
-        rule: "�����EP�\���𖳒f�ōĉ��߂��Ȃ��B"
+        rule: "既定のEP構成を無断で再解釈しない。"
       - id: "IM-ST-005"
         rule: >
-          Scene Card�Œ�`����Ă��Ȃ��傫�ȋ@�\�ǉ�
-          �i�V�����A�V�����A�V�Η����A�V�^���j�͎����ōs��Ȃ��B
+          Scene Cardで定義されていない大きな機能追加
+          （新事件、新説明、新対立軸、新真相）は自動で行わない。
 
     narrative_logic:
       - id: "IM-NL-001"
         rule: >
-          �d�|���E��F�E�t�]�E�\�I�E�~�o�ȂǁA
-          �������������\���́A���o�Ƃ��Ăł͂Ȃ��\�������Ƃ��Ĉ����B
+          仕掛け・誤認・逆転・暴露・救出など、
+          成立条件を持つ構造は、演出としてではなく構造条件として扱う。
       - id: "IM-NL-002"
         rule: >
-          ��O�҂̌�F��F���������������ł���ꍇ�A
-          �N�������ǂ���F���Ă��邩�𖾎�����B
+          第三者の誤認や認識差が成立条件である場合、
+          誰が何をどう誤認しているかを明示する。
       - id: "IM-NL-003"
         rule: >
-          �댯����E���S���u�E���R�ł͂Ȃ�����v�f�́A
-          �K�v�Ȃ�\����̑O��Ƃ��Ė��L����B
+          危険回避・安全装置・偶然ではない制御要素は、
+          必要なら構造上の前提として明記する。
       - id: "IM-NL-004"
         rule: >
-          �ォ�琮��������邽�߂̏ꓖ����I�⑫�������B
-          �K�v�Ȃ�u�O��ǉ��v�Ƃ��Ė�������B
+          後から整合性を取るための場当たり的補足を避ける。
+          必要なら「前提追加」として明示する。
 
     character:
       - id: "IM-CH-001"
-        rule: "�L�����N�^�[�̍��{�ϗ��E���f�����E�����͖��f�ύX���Ȃ��B"
+        rule: "キャラクターの根本倫理・判断原理・役割は無断変更しない。"
       - id: "IM-CH-002"
-        rule: "�ꎞ�I�ȏ�ʉf���̂��߂ɃL�����N�^�[�m���������Ȃ��B"
+        rule: "一時的な場面映えのためにキャラクター知性を下げない。"
       - id: "IM-CH-003"
-        rule: "�L�����N�^�[�̍s�����R�́A���̏�̓s���ł͂Ȃ������ݒ�Ɛڑ�����B"
+        rule: "キャラクターの行動理由は、その場の都合ではなく既存設定と接続する。"
       - id: "IM-CH-004"
         rule: >
-          �l���̌ď́E�S�������E�֌W���́A������addressing rules��
-          character layer�Ɩ������Ȃ��悤�����B
+          人物の呼称・心理距離・関係性は、既存のaddressing rulesや
+          character layerと矛盾しないよう扱う。
 
     tone_and_project_identity:
       - id: "IM-TP-001"
-        rule: "��i�ŗL�̃g�[�����A�ėp�A�j���I�E�ėp���m�x�I�����ŏ㏑�����Ȃ��B"
+        rule: "作品固有のトーンを、汎用アニメ的・汎用ラノベ的処理で上書きしない。"
       - id: "IM-TP-002"
-        rule: "���ՂȐ����ߑ��E����ߑ��E���o�ߑ��ō�i�̊������Ȃ��B"
+        rule: "安易な説明過多・感情過多・演出過多で作品の基調を崩さない。"
       - id: "IM-TP-003"
         rule: >
-          �{����L�ْ̋����A������{���A�铽���A���x���A�F���̃Y���ɂ��T�X�y���X���ێ�����B
+          本作特有の緊張感、現代日本性、秘匿性、制度感、認識のズレによるサスペンスを維持する。
 
   change_protocol:
     basic_policy: >
-      �\���ύX�͒�ĉ\�����A�������{�͕s�B
-      �ύX�́u��āv�Ɓu���f�v�𕪗�����B
+      構造変更は提案可能だが、自動実施は不可。
+      変更は「提案」と「反映」を分離する。
     required_for_change:
       - "change_target"
       - "reason"
@@ -129,89 +129,89 @@ GLOBAL_CONFIG:
       - "pending"
     change_categories:
       minor:
-        description: "�\�������A�����񂵏C���A��񖾊m��"
+        description: "表現調整、言い回し修正、情報明確化"
         auto_allowed: true
       structural:
-        description: "SC�����ASC�����A�����ύX�A���������ύX�A�����Ĕz�u"
+        description: "SC分割、SC統合、順序変更、成立条件変更、伏線再配置"
         auto_allowed: false
       canonical:
-        description: "���E�ϕύX�A�L���������ύX�A�ݒ�Ē�`"
+        description: "世界観変更、キャラ原理変更、設定再定義"
         auto_allowed: false
 
   scene_card_governance:
-    purpose: "Scene Card�̗��x�E�����E���E��ی삷��B"
+    purpose: "Scene Cardの粒度・役割・境界を保護する。"
     rules:
       - id: "SCG-001"
-        rule: "�eSC�͌ŗL�̖��������P�ʂƂ��Ĉ����B"
+        rule: "各SCは固有の役割を持つ単位として扱う。"
       - id: "SCG-002"
-        rule: "�{����̓s��������SC�̐Ӗ���א�SC�ֈڂ��Ȃ��B"
+        rule: "本文上の都合だけでSCの責務を隣接SCへ移さない。"
       - id: "SCG-003"
-        rule: "���SC�ɕ����̑�^�@�\���ߏ舳�k���Ȃ��B"
+        rule: "一つのSCに複数の大型機能を過剰圧縮しない。"
       - id: "SCG-004"
-        rule: "�t�ɁA���o��̎v���������ōו������Ȃ��B"
+        rule: "逆に、演出上の思いつきだけで細分化しない。"
       - id: "SCG-005"
         rule: >
-          SC�������͕K��
-          �w����SC�̖����x�w�O��SC�Ƃ̐ڑ��x�wEP�S�̂ł̋@�\�x
-          ���m�F����B
+          SC調整時は必ず
+          『このSCの役割』『前後SCとの接続』『EP全体での機能』
+          を確認する。
 
   state_management:
     confirmed_state_definition: >
-      ���[�U�[���m��E�̗p�E���F�������݂̂̂�confirmed�Ƃ��Ĉ����B
+      ユーザーが確定・採用・承認したもののみをconfirmedとして扱う。
     unconfirmed_state_definition: >
-      ��āA�����A�⏕�āAAI���̐����⊮��unconfirmed�Ƃ��Ĉ����B
+      提案、仮説、補助案、AI側の推測補完はunconfirmedとして扱う。
     required_labels:
       - "confirmed"
       - "proposed"
       - "draft"
       - "needs_review"
     anti_drift_rules:
-      - "�ߋ��̌Â��Ă��A�ŐV�m��ĂƂ��Ĉ���Ȃ��B"
-      - "�{�����̋����I�\����ݒ�m�舵�����Ȃ��B"
-      - "���r���[�p�����𐳋K�ݒ�Ƃ��ď��i�����Ȃ��B"
+      - "過去の古い案を、最新確定案として扱わない。"
+      - "本文中の偶発的表現を設定確定扱いしない。"
+      - "レビュー用仮文を正規設定として昇格させない。"
 
   response_behavior_for_ai:
     mandatory_behavior:
-      - "�ύX��ĂƕύX���f�𕪗�����"
-      - "�\�������͖����I�ɐ錾����"
-      - "�s���_�͏���ɖ��߂��A���m��Ƃ��Ĉ���"
-      - "����Config�ւ̐����m�F��D�悷��"
-      - "�Ǐ����P�Ă��S�̍\�����󂷏ꍇ�͍̗p���Ȃ�"
+      - "変更提案と変更反映を分離する"
+      - "構造事項は明示的に宣言する"
+      - "不明点は勝手に埋めず、未確定として扱う"
+      - "既存Configへの整合確認を優先する"
+      - "局所改善案が全体構造を壊す場合は採用しない"
     forbidden_behavior:
-      - "���F�Ȃ�SC����"
-      - "���F�Ȃ�SC����"
-      - "���F�Ȃ������ύX"
-      - "���F�Ȃ��ݒ�㏑��"
-      - "���̏ꂵ�̂��̌�t������"
-      - "�h���}���̂��߂����̃L������"
-      - "�������j��ǂ܂��ɔėp�W�J�֗�������"
+      - "承認なしSC分割"
+      - "承認なしSC統合"
+      - "承認なし順序変更"
+      - "承認なし設定上書き"
+      - "その場しのぎの後付け整合"
+      - "ドラマ性のためだけのキャラ劣化"
+      - "既存方針を読まずに汎用展開へ流すこと"
 
   output_control:
     when_generating_scene_cards:
-      - "�eSC�̖����𖾎�����"
-      - "�ύX�L���𖾎�����"
-      - "�\���ύX������ꍇ�͏��F�҂��Ŏ~�߂�"
+      - "各SCの役割を明示する"
+      - "変更有無を明示する"
+      - "構造変更がある場合は承認待ちで止める"
     when_generating_prose:
-      - "����Scene Card����E���Ȃ�"
-      - "����`�̑�v�f��ǉ����Ȃ�"
-      - "�F�����E��F�E�����͍\�������ɏ]��"
+      - "既存Scene Cardを逸脱しない"
+      - "未定義の大要素を追加しない"
+      - "認識差・誤認・伏線は構造条件に従う"
     when_reviewing:
-      - "���_�� layer �P�ʂŕ��ނ���"
-      - "�\�����ƍ\�����𕪗�����"
-      - "�C����Ă��s�σ��[���ɐG���ꍇ�͌x������"
+      - "問題点を layer 単位で分類する"
+      - "表現問題と構造問題を分離する"
+      - "修正提案が不変ルールに触れる場合は警告する"
 
   practical_checklist:
     before_any_major_output:
-      - "����͍\���ύX���܂ނ�"
-      - "����͏��F�ς݂�"
-      - "�ǂ̃��C���[�ɉe�����邩"
-      - "�����m�莖���Ɩ������Ȃ���"
-      - "�Ǐ����P���S�̂��󂵂Ă��Ȃ���"
+      - "これは構造変更を含むか"
+      - "それは承認済みか"
+      - "どのレイヤーに影響するか"
+      - "既存確定事項と矛盾しないか"
+      - "局所改善が全体を壊していないか"
     before_scene_adjustment:
-      - "����SC�̖����͉���"
-      - "�O��SC�Ƃ̊֌W�͈ێ�����Ă��邩"
-      - "���������͕ێ�����Ă��邩"
-      - "�F���\���͕���Ă��Ȃ���"
+      - "このSCの役割は何か"
+      - "前後SCとの関係は維持されているか"
+      - "成立条件は保持されているか"
+      - "認識構造は崩れていないか"
 
   initial_integration_targets:
     expected_related_files:
@@ -221,18 +221,18 @@ GLOBAL_CONFIG:
       - "/episodes/EP01/scene_cards.yaml"
       - "/episodes/EP02/scene_cards.yaml"
     note: >
-      �����i�K�ł́A����GLOBAL_CONFIG���ŗD��Q�ƃt�@�C���Ƃ��Ĉ����A
-      ���ʃt�@�C�����̋L�q�s����₤�̂ł͂Ȃ��A������s�������o���邽�߂Ɏg���B
+      初期段階では、このGLOBAL_CONFIGを最優先参照ファイルとして扱い、
+      下位ファイル側の記述不足を補うのではなく、矛盾や不足を検出するために使う。
 
   versioning_policy:
     policy:
-      - "�j��I�ύX��minor�ł͂Ȃ�major�܂��͖��m��revision�Ƃ��ĊǗ�����"
-      - "�^�p���Ȃ���ǋL���Ă悢���A�s�σ��[���ύX�͗���������"
-      - "��蔭�����_�@�ɒǉ��������[���́A�Ĕ��h�~�ϓ_�ŋL�^����"
+      - "破壊的変更はminorではなくmajorまたは明確なrevisionとして管理する"
+      - "運用しながら追記してよいが、不変ルール変更は履歴化する"
+      - "問題発生を契機に追加したルールは、再発防止観点で記録する"
     next_expected_version: "v0.2.0"
 
   usage_prompt:
     recommended_instruction: >
-      ���̍�Ƃł� /config/GLOBAL_CONFIG.yaml ���ŏ�ʃ��[���Ƃ��ĎQ�Ƃ��Ă��������B
-      ����Config�AScene Card�A�{���Ă����̃t�@�C���ɖ�������ꍇ�A
-      �����␳�����A�����_�E�e���͈́E�C�����������Ă��������B
+      この作業では /config/GLOBAL_CONFIG.yaml を最上位ルールとして参照してください。
+      下位Config、Scene Card、本文案がこのファイルに矛盾する場合、
+      自動補正せず、矛盾点・影響範囲・修正候補を示してください。

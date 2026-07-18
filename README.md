@@ -28,24 +28,23 @@ Stories are the result of these systems.
 
 ```mermaid
 flowchart TD
-    A["PROJECT MASTER CONTEXT<br/>What to build"] --> B["GLOBAL CONFIG<br/>How to build"]
+    L0["L0 GLOBAL_CONFIG<br/>Governance / How to build"]
+    L1["L1 PROJECT_MASTER_CONTEXT<br/>Theme / What to build"]
+    L2["L2 WORLD_AND_RULE_CONFIG<br/>World laws / Magic system"]
+    L3["L3 Episode Structure<br/>ep03_structure.yaml"]
+    L4["L4 Scene Card<br/>SCENE_CARD_TEMPLATE v1.1"]
+    L5["L5 Prose Generation"]
 
-    B --> C1["MAGOSHA_COMMON_RULES"]
-    B --> C2["CHARACTER_LAYER"]
-    B --> C3["HUMAN_BEHAVIOR_CONSTRAINTS"]
-    B --> C4["WORLD_HISTORY_LAYER"]
-    B --> C5["addressing_rules"]
+    L0 --> L1 --> L2 --> L3 --> L4 --> L5
+    L0 -.enforces.-> L3
+    L0 -.enforces.-> L4
+    L0 -.enforces.-> L5
 
-    C1 --> D["Scene Structure<br/>(SC System)"]
-    C2 --> D
-    C3 --> D
-    C4 --> D
-    C5 --> D
+    C["Domain Configs<br/>Config v3.1 / addressing_rules"] --> L4
+    L2 --> C
 
-    D --> E["EP02 Narrative Execution<br/>Trap Design / Misdirection"]
-
-    B --> F["Governance System"]
-    F --> D
+    L5 -->|validation| R["Review / decision_logs"]
+    R -->|approved change| L3
 ```
 ---
 
@@ -78,15 +77,21 @@ This introduces **governance into AI narrative generation**.
 
 ---
 
-### 3. EP02 – Structural Trap Design
+### 3. Act II – EP03 (Current Development)
 
-Episode 02 is used as a test case for:
+Episode 03 opens the second act. It introduces structural problems that
+EP01/EP02 never had to solve:
 
-- Misdirection design
-- Perception manipulation
-- Explicitly defined narrative “lies”
+- **10 scenes across multiple locations** (vs. a single-incident chapter)
+- **Dual-line alternating progression** (SC04–SC07), converging at SC07
+- **Cliffhanger enforcement** — every scene must end on a hook
+- **Non-converging tension curve** — the chapter ends suspended, still rising
 
-The goal is to design **how readers misinterpret events**.
+EP03 also separates **witnessing** from **participating** as a hard structural
+constraint: the protagonist may only witness the climax, never join it.
+
+EP02 (structural trap design — misdirection, perception control, explicitly
+defined narrative "lies") is complete and retained as a reference case.
 
 ---
 
@@ -106,6 +111,24 @@ This prevents dialogue drift during AI-assisted generation.
 
 ---
 
+### 5. World Law Layer (L2)
+
+`WORLD_AND_RULE_CONFIG.yaml` isolates world laws — the origin and principles of
+magic, ability structure, and social rules — from character behavior configs.
+
+This file is **not a reference to fill gaps with. It is a specification to
+validate against.** Generated prose is checked for deviation from it.
+
+---
+
+### 6. Conventions
+
+- **Encoding:** UTF-8, LF, no BOM. Shift_JIS is prohibited.
+- **Change history:** `raw/decision_logs/CHANGELOG.md`
+- **Governance:** conflicts must be reported, never silently resolved.
+
+---
+
 ## Quick Start
 
 If you are new to this repository:
@@ -117,11 +140,17 @@ If you are new to this repository:
    - `docs/10_config_design.md`
 
 3. See actual structure:
-   - `raw/episodes/ep02_structure.yaml`
+   - `raw/episodes/ep03_structure.yaml` (current)
+   - `raw/episodes/ep02_structure.yaml` (reference)
 
 4. Check core configs:
-   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
-   - `raw/Config/GLOBAL_CONFIG.yaml`
+   - `raw/Config/GLOBAL_CONFIG.yaml` (L0)
+   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml` (L1)
+   - `raw/Config/WORLD_AND_RULE_CONFIG.yaml` (L2)
+   - `raw/Config/Config_v3.1.yaml` (current domain config)
+
+5. Read the change history:
+   - `raw/decision_logs/CHANGELOG.md`
 
 ---
 
@@ -130,6 +159,8 @@ If you are new to this repository:
 docs/        Edited documentation and design notes
 
 raw/         Source materials: configs, YAML files, episode structures
+
+raw/decision_logs/   Change history and design decision records
 
 archive/     Deprecated versions, rejected drafts, generated drafts
 
@@ -175,9 +206,10 @@ This project addresses that by:
 
 ## Status
 
-- Config system: Active
+- Config system: Active (v3.1)
 - Governance system: Active
-- EP02: In development
+- EP01 / EP02: Structure complete
+- EP03 (Act II): In development — SC01–SC03 defined
 
 ---
 
@@ -243,15 +275,19 @@ AI生成に「統制」を導入する。
 
 ---
 
-### 3. EP02：トラップ設計
+### 3. 第二幕：EP03（現在の主実験）
 
-現在の主実験：
+第三章は第二幕の開幕であり、EP01／EP02 では発生しなかった構造課題を扱う。
 
-- 誤誘導の設計
-- 認知操作
-- 「嘘」の構造化
+- **複数舞台・全10話構成**（単一事件の章とは前提が異なる）
+- **2ライン交互進行**（SC04〜SC07）と、SC07での収束
+- **全SCラストのクリフハンガー義務化**
+- **緊張曲線を収束させない**（上昇したまま章を閉じる）
 
-読者がどのように誤解するかを設計する。
+さらに「**目撃**」と「**加担**」の分離を構造条件として固定している。
+主人公はクライマックスを目撃するのみで、加担は次章へ繰り越す。
+
+EP02（誤誘導・認知操作・「嘘」の構造化）は完了し、参照事例として保持する。
 
 ---
 
@@ -269,7 +305,25 @@ AI生成に「統制」を導入する。
 
 これにより、会話生成時の呼称ブレを抑制する。
 
-----
+---
+
+### 5. 世界法則レイヤー（L2）
+
+`WORLD_AND_RULE_CONFIG.yaml` により、世界法則（魔法の起源・原理・能力構成・
+社会規則）をキャラクター挙動Configから分離した。
+
+本ファイルは「**参照して補う**」ものではなく、「**逸脱していないかを検証する**」
+ためのものである。
+
+---
+
+### 6. 規約
+
+- **文字コード**：UTF-8 / LF / BOMなし。Shift_JIS は禁止
+- **変更履歴**：`raw/decision_logs/CHANGELOG.md`
+- **ガバナンス**：矛盾は報告する（黙って修正しない）
+
+---
 
 ## クイックスタート
 
@@ -282,11 +336,17 @@ AI生成に「統制」を導入する。
    - `docs/10_config_design.md`
 
 3. 構造：
-   - `raw/episodes/ep02_structure.yaml`
+   - `raw/episodes/ep03_structure.yaml`（現行）
+   - `raw/episodes/ep02_structure.yaml`（参照）
 
 4. コアConfig：
-   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml`
-   - `raw/Config/GLOBAL_CONFIG.yaml`
+   - `raw/Config/GLOBAL_CONFIG.yaml`（L0）
+   - `raw/Config/PROJECT_MASTER_CONTEXT.yaml`（L1）
+   - `raw/Config/WORLD_AND_RULE_CONFIG.yaml`（L2）
+   - `raw/Config/Config_v3.1.yaml`（現行ドメインConfig）
+
+5. 変更履歴：
+   - `raw/decision_logs/CHANGELOG.md`
 
 ---
 
@@ -295,6 +355,8 @@ AI生成に「統制」を導入する。
 docs/        編集済みドキュメント
 
 raw/         YAML・Config・EP構造などの一次資料
+
+raw/decision_logs/   変更履歴・設計判断の記録
 
 archive/     旧版・廃案
 
@@ -335,6 +397,7 @@ diagrams/    図解
 
 ## 状態
 
-- Configシステム：稼働中
+- Configシステム：稼働中（v3.1）
 - ガバナンス：運用中
-- EP02：開発中
+- EP01／EP02：構造確定
+- EP03（第二幕）：開発中 — SC01〜SC03 定義済み

@@ -67,21 +67,48 @@
 
 ### 🔧 Fixed
 
-- `GLOBAL_CONFIG.yaml` / `PROJECT_MASTER_CONTEXT.yaml` を CP932 → UTF-8 (LF) へ変換
-  - 最上位2レイヤー（L0/L1）が Shift_JIS のままで、GitHub 上で文字化けし、
-    UTF-8前提のツールから読み取り不能だったため
-  - SCENE_CARD_TEMPLATE v1.1.0 が定める Encoding 規約との矛盾を解消
+#### 文字コードの全面 UTF-8 化（11ファイル）
+
+- CP932 (Shift_JIS) で保存されていた全11ファイルを **UTF-8 / LF / BOMなし** へ変換
+- SCENE_CARD_TEMPLATE v1.1.0 が定める Encoding 規約と実体の矛盾を解消
+- GitHub 上での文字化け、および UTF-8 前提ツールからの読み取り不能を解消
+
+**対象（第1次：最上位レイヤー）**
+
+- `raw/Config/GLOBAL_CONFIG.yaml`（L0）
+- `raw/Config/PROJECT_MASTER_CONTEXT.yaml`（L1）
+
+**対象（第2次：残存分）**
+
+- `docs/00_current_state.md`
+- `docs/02_governance.md`
+- `docs/60_ep02_design_notes.md`
+- `raw/scene_cards/EP02/EP02_SC05.yaml` 〜 `EP02_SC10.yaml`（6件）
+
+**検証**
+
+- 全ファイル UTF-8 デコード確認済み
+- YAML 8件は `safe_load` によるパース検証済み（トップレベルキー不変）
+- 変換済シーンカード6枚は、既存UTF-8の `EP02_SC04.yaml`（flat形式）と
+  キー構成が完全一致。**内容・構造の変更はなし**（文字コードと改行コードのみ）
+- リポジトリ全体スキャン結果：**残存 CP932 = 0件 / UTF-8 = 96件**
+
+### 📋 Notes
+
+- EP02 シーンカードのラップ形式混在は未解消（テンプレv1.1.0 が指摘した既知事項）
+  - `scene:[]` ラップ：SC01, SC02
+  - `scenes:[]` ラップ：SC03
+  - flat：SC04〜SC10
+  - 今回の変換では形式統一は行っていない（文字コード変換の範囲外）
 
 ### ⚠️ Known Issues
 
-- 以下は依然として CP932。UTF-8化は未実施：
-  - `docs/00_current_state.md` / `docs/02_governance.md` / `docs/60_ep02_design_notes.md`
-  - `raw/scene_cards/EP02/EP02_SC05.yaml` 〜 `EP02_SC10.yaml`（6件）
 - `ep03_structure.yaml` の `depends_on` は `Config@3.0` を指す。正本は v3.1 のため、
   次回更新時に `Config@3.1` へ追従させる
-- `docs/00_current_state.md` の記載が実体と不一致
+- `docs/00_current_state.md` の記載内容が実体と不一致（UTF-8化のみ実施済・内容は未更新）
   - 有効ドメインConfigを `config_v2.5.yaml` と記載（実体は v3.1）
   - ファイル名の大小文字も不一致（実体は `Config_v2.5.yaml`）
+  - 現在の焦点を EP02 と記載（実体は EP03）
 
 ---
 

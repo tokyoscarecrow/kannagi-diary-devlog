@@ -33,7 +33,7 @@ are designed as a unified system.
 EP02 introduces:
 
 - Intentional misinterpretation
-- Explicit �gfalse assumptions�h
+- Explicit “false assumptions”
 - Controlled reader perception
 
 ---
@@ -56,7 +56,7 @@ EP02 introduces:
 
 ---
 
-### Mao�fs Plan
+### Mao’s Plan
 
 - Slightly open water valve
 - Water rises slowly
@@ -67,7 +67,7 @@ EP02 introduces:
 
 ### Narrative Lie
 
-> �gIf we don�ft stop it, she will drown.�h
+> “If we don’t stop it, she will drown.”
 
 Initially false.
 
@@ -120,72 +120,72 @@ EP02 demonstrates:
 
 ---
 
-# EP02�݌v�m�[�g�i���{��Łj
+# EP02設計ノート（日本語版）
 
-## �T�v
+## 概要
 
-EP02�́A
+EP02は、
 
-- �\��
-- ����
-- �F�m�g���b�v
+- 構造
+- 制約
+- 認知トラップ
 
-�𓝍��݌v����ŏ��̃t�F�[�Y�B
-
----
-
-## �ړI
-
-> �g���b�N�ł͂Ȃ��\���Ƃ��Č�U����݌v����
+を統合設計する最初のフェーズ。
 
 ---
 
-## ��v�v�f
+## 目的
 
-### 1. �V�[���J�[�h�iSC�j
-
-- SC�P�ʂō\��
-- ���������m
-- �\���͌Œ�
+> トリックではなく構造として誤誘導を設計する
 
 ---
 
-### 2. �g���b�v�݌v
+## 主要要素
 
-- �Ӑ}�I��F
-- �R�̖�����
-- �F�m����
+### 1. シーンカード（SC）
 
----
-
-## SC01㩍\��
-
-�i���m��ݒ�j
-
-- ���Z�ɒn���J����
-- ���b�J�[���݂̂���
-- �����J�n
-- �^���̌�Z
-- ���ۂ̊�@
+- SC単位で構成
+- 役割が明確
+- 構造は固定
 
 ---
 
-## ����
+### 2. トラップ設計
 
-- �ǎ҂Ɛ^���̔F�m����v������
-- �����ɕ��󂳂���
-
----
-
-## �Ӌ`
-
-- ���񂩂畨�ꂪ���܂�����
-- �F�m�݌v�̓���
+- 意図的誤認
+- 嘘の明文化
+- 認知操作
 
 ---
 
-## ���
+## SC01罠構造
 
-- �\���m��
-- �g���b�v�m��
-- �K�o�i���X�K�p��
+（※確定設定）
+
+- 旧校舎地下雨水槽
+- ロッカー内のみずは
+- 注水開始
+- 真魚の誤算
+- 実際の危機
+
+---
+
+## 役割
+
+- 読者と真魚の認知を一致させる
+- 同時に崩壊させる
+
+---
+
+## 意義
+
+- 制約から物語が生まれる実証
+- 認知設計の導入
+
+---
+
+## 状態
+
+- 構造確定
+- トラップ確定
+- ガバナンス適用済

@@ -1,5 +1,5 @@
 scene_id: "EP03_SC02"
-title: "主敵との邂逅"
+title: "True North"  # 内容は諏訪との初対面（旧FINAL『主敵との邂逅』）。章の位置づけから組織名をタイトルに
 
 time:
   relative: "SC02の後日"
@@ -125,7 +125,7 @@ prose_length:
 
 meta:
   source: "EP03_episode_breakdown_FINAL.md（正典）の『主敵との邂逅』の内容。本作構成では SC02（SC01の続き）として配置"
-  numbering_note: "本カードは当初SC03として誤作成されたが、正しくはSC02。『旧SC02（キャンパスでのTrue North勧誘）』は誤って生成された不要物で、存在しない扱い（削除済み）"
+  numbering_note: "章を圧縮（FINALのSC02＝True North健全表層を削除し以降を一つ繰り上げ／全9話）。本シーンは内容＝諏訪との初対面（旧FINAL『主敵との邂逅』）だが、章の位置づけからタイトルは『True North』とする。旧SC02（キャンパスでの勧誘）は誤生成の不要物で不存在（削除済み）"
   author_rulings:
     - "A：虹彩明滅は魔法使用時のみ。初対面では『不穏な感じ』止まり"
     - "B：真魚は観察のみ→香取に気づかれて立ち去る（台詞なし）"

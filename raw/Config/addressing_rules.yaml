@@ -23,7 +23,7 @@ addressing_rules:
   # 1. 飯綱隼太 → 他キャラ
   # ---------------------------------------------
   izuna_shunta:
-    to_mizuha: "みずは"
+    to_mizuha: "みず葉"
     to_mao:
       default: "氷川さん"
       transition:
@@ -31,11 +31,11 @@ addressing_rules:
         value: "真魚さん"
     to_sumiyoshi: "奨太郎"
     to_myojin: "明神さん"
-    to_suwa: "諏訪さん"
+    to_suwa: "諏訪先輩"
     to_anne_marie: "香取さん"
 
   # ---------------------------------------------
-  # 2. 大神みずは → 他キャラ
+  # 2. 大神みず葉 → 他キャラ
   # ---------------------------------------------
   omiwa_mizuha:
     to_shunta: "隼太"
@@ -65,7 +65,7 @@ addressing_rules:
   # ---------------------------------------------
   sumiyoshi_shotaro:
     to_shunta: "隼太"
-    to_mizuha: "みずは"
+    to_mizuha: "みず葉"
     to_mao: "氷川さん"
     to_myojin: "明神さん"
     to_suwa: "諏訪先輩"
@@ -98,7 +98,7 @@ addressing_rules:
   # ---------------------------------------------
   katori_anne_marie:
     to_shunta: "隼太くん"
-    to_mizuha: "みずはちゃん"
+    to_mizuha: "みず葉ちゃん"
     to_mao: "真魚ちゃん"
     to_sumiyoshi: "住吉くん"
     to_myojin: "明神さん"

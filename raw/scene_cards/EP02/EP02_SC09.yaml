@@ -6,7 +6,7 @@ location:
   primary: "保健室"
 participants:
   - "飯綱隼太"
-  - "大神みずは"
+  - "大神みず葉"
   - "氷川真魚"
 
 purpose:
@@ -31,11 +31,11 @@ structure:
     - phase: "理解と否定"
       description: "隼太が動機を理解しつつ行動を否定する"
     - phase: "介入"
-      description: "みずはが乱入し、感情的に対峙する"
+      description: "みず葉が乱入し、感情的に対峙する"
     - phase: "対立"
-      description: "みずはが真魚の行動を強く批判"
+      description: "みず葉が真魚の行動を強く批判"
     - phase: "カウンター"
-      description: "みずは自身の過去（魔法による影響）を提示"
+      description: "みず葉自身の過去（魔法による影響）を提示"
     - phase: "受容"
       description: "真魚が反論せず、謝罪を受け入れる"
     - phase: "意思表明"
@@ -53,11 +53,11 @@ beats:
   - order: 3
     summary: "真魚が父の存在と連行の事実を語る（初出情報）"
   - order: 4
-    summary: "隼太が動機を理解しつつ、みずはを巻き込んだことを否定する"
+    summary: "隼太が動機を理解しつつ、みず葉を巻き込んだことを否定する"
   - order: 5
-    summary: "みずはが乱入し、真魚を激しく非難する"
+    summary: "みず葉が乱入し、真魚を激しく非難する"
   - order: 6
-    summary: "みずはが自身の過去と現在の状況を明かす"
+    summary: "みず葉が自身の過去と現在の状況を明かす"
   - order: 7
     summary: "真魚が謝罪しつつ、目的を諦めないと明言する"
   - order: 8
@@ -65,14 +65,14 @@ beats:
   - order: 9
     summary: "隼太が止めるか理解するか判断できず動けない"
   - order: 10
-    summary: "みずはが怒りを残したまま突き放す"
+    summary: "みず葉が怒りを残したまま突き放す"
   - order: 11
     summary: "真魚が隼太に一言残して退出する"
 
 key_information_revealed:
   - "真魚の父は魔法使用により当局に連行された"
   - "真魚の目的は父の救出である"
-  - "みずはも魔法の影響を受けた過去を持つ"
+  - "みず葉も魔法の影響を受けた過去を持つ"
   - "隼太は真魚の動機を理解できるが、行動は認められない"
 
 withheld_information:
@@ -93,7 +93,7 @@ tone:
 foreshadowing:
   - "真魚の再登場（外部からの行動）"
   - "隼太の選択の深化"
-  - "みずはとの関係の変化"
+  - "みず葉との関係の変化"
 
 character_notes:
   hayata:

@@ -7,7 +7,7 @@ location:
   secondary: "旧校舎 屋上"
 participants:
   - "飯綱隼太"
-  - "大神みずは"
+  - "大神みず葉"
   - "氷川真魚"
   - "明神明"
   - "住吉奨太郎"
@@ -34,7 +34,7 @@ structure:
     - phase: "違和感"
       description: "屋上の様子に違和感を覚えるが、解釈は修正されない"
     - phase: "対峙（屋上）"
-      description: "みずは・隼太が真魚と対面する"
+      description: "みず葉・隼太が真魚と対面する"
     - phase: "極限行動"
       description: "真魚が後方へ下がり、飛び降りる"
     - phase: "選択"
@@ -54,7 +54,7 @@ beats:
   - order: 4
     summary: "観衆の一部が違和感を抱くが、認識は修正されない"
   - order: 5
-    summary: "屋上でみずは・隼太・明神が真魚と対峙する"
+    summary: "屋上でみず葉・隼太・明神が真魚と対峙する"
   - order: 6
     summary: "真魚が校庭を確認し、観衆の存在を認識する"
   - order: 7

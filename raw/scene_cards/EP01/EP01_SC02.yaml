@@ -1,4 +1,4 @@
-﻿scene:
+scene:
   id: "EP01_SC02"
   chapter: 1
   seq: 2
@@ -9,15 +9,15 @@
   characters:
     - name: "飯綱隼太"
       role: "主人公"
-    - name: "大神みずは"
+    - name: "大神みず葉"
       role: "ヒロイン／幼なじみ"
     - name: "住吉奨太郎"
       role: "親友"
 
   goals:
-    protagonist: "隼太とみずはの『当たり前の距離感』を提示する"
+    protagonist: "隼太とみず葉の『当たり前の距離感』を提示する"
     antagonist: "言語化されない過去の重さ"
-    scene_question: "なぜ、みずはは隼太を気にかけ続けているのか？"
+    scene_question: "なぜ、みず葉は隼太を気にかけ続けているのか？"
 
   conflict: "平穏な日常の中に潜む、説明されない感情の差"
 
@@ -32,7 +32,7 @@
   beats:
     - id: "B1"
       goal: "ヒロインの存在感を先行提示"
-      action: "みずはとの登校と教室入り"
+      action: "みず葉との登校と教室入り"
     - id: "B2"
       goal: "関係性の違和感を匂わせる"
       action: "意味の説明されない一言を挿入"
@@ -47,7 +47,7 @@
     reveal_policy:
       level: "伏線のみ"
       notes:
-        - "みずはの動機はSC03で回収"
+        - "みず葉の動機はSC03で回収"
 
   output_format: "narrative prose + inner monologue"
   target_length: "1400〜1700字"

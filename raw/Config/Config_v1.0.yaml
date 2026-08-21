@@ -52,8 +52,8 @@ characters:
     change_arc: "「隠す」→「大事なものを守るために魔法を使いたい」"
     keywords: ["抑圧", "自己承認欲求", "劣等感とプライド", "優しい心根"]
 
-  - name: "大神みずは"
-    reading: "おおみわ みずは"
+  - name: "大神みず葉"
+    reading: "おおみわ みず葉"
     role: "ヒロイン／幼なじみ"
     age: 17
     attributes: ["六ッ川高校2年生"]
@@ -106,9 +106,9 @@ characters:
 
 structure:
   base_model: "三幕構成（導入／対立／解放）"
-  inciting_incident: "魔法者の隼太と、その秘密を知るみずはの学校に謎めいた美少女・真魚が転校してくる。"
+  inciting_incident: "魔法者の隼太と、その秘密を知るみず葉の学校に謎めいた美少女・真魚が転校してくる。"
   turn_point: "転校生・真魚が正体を現し、憎き魔法者を排除しようと行動する。"
-  climax: "追い詰められた隼太は、みずはを守るために魔法を使わざるを得ない状況になる。"
+  climax: "追い詰められた隼太は、みず葉を守るために魔法を使わざるを得ない状況になる。"
   ending_policy: "静かな共存（AIには「悲劇／融和／別れ」三択で生成評価させる）"
 
 emotion_curve:
@@ -129,7 +129,7 @@ scene_card_template:
   scene_id: "EP01_SC01"        # 例: EP01_SC02, EP02_SC01 ...
   title: "放課後の屋上"
   setting: "六ッ川高校の屋上。夕焼け。"
-  characters: ["飯綱隼太", "大神みずは", "氷川真魚"]
+  characters: ["飯綱隼太", "大神みず葉", "氷川真魚"]
   conflict: "恋心と秘密の衝突。隼太の魔法が暴発しかける。"
   emotional_phase: "安堵→緊張→動揺→決意"
   world_rule_reminder: "発動は感情変動と連動／使用痕跡は検出可能／公然使用は隔離処分"

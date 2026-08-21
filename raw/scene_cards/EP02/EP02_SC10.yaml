@@ -6,7 +6,7 @@ location:
   primary: "教室"
 participants:
   - "飯綱隼太"
-  - "大神みずは"
+  - "大神みず葉"
   - "氷川真魚"
   - "住吉奨太郎"
   - "クラスメイトたち"
@@ -28,43 +28,43 @@ structure:
     - phase: "日常復帰"
       description: "文化祭後の日常的な教室風景"
     - phase: "異物発見"
-      description: "みずはが真魚の存在に気づく"
+      description: "みず葉が真魚の存在に気づく"
     - phase: "混乱"
-      description: "みずはが真魚を問い詰める"
+      description: "みず葉が真魚を問い詰める"
     - phase: "誤認増幅"
       description: "住吉とクラスメイトが屋上事件を恋愛的に解釈する"
     - phase: "真相説明"
-      description: "真魚が明神の判断をみずはに説明する"
+      description: "真魚が明神の判断をみず葉に説明する"
     - phase: "固定化"
       description: "『何事もなかったことにする』方針が示される"
     - phase: "関係誤認"
       description: "真魚が隼太へ親しげに接し、誤解が強化される"
     - phase: "オチ"
-      description: "みずはが怒鳴り、周囲が面白がる"
+      description: "みず葉が怒鳴り、周囲が面白がる"
 
 beats:
   - order: 1
     summary: "文化祭から三日後、日常に戻った教室が描写される"
   - order: 2
-    summary: "みずはが隼太の隣に座る真魚を発見する"
+    summary: "みず葉が隼太の隣に座る真魚を発見する"
   - order: 3
-    summary: "みずはが真魚へ強く抗議する"
+    summary: "みず葉が真魚へ強く抗議する"
   - order: 4
     summary: "住吉が屋上事件を『学校公認カップル』として騒ぎ立てる"
   - order: 5
     summary: "クラスメイトたちが誤認を共有・固定化する"
   - order: 6
-    summary: "真魚が退学予定だったことをみずはへ明かす"
+    summary: "真魚が退学予定だったことをみず葉へ明かす"
   - order: 7
     summary: "明神の判断により『何事もなかったように振る舞う』方針になったと説明"
   - order: 8
-    summary: "みずはが処理方針に絶句する"
+    summary: "みず葉が処理方針に絶句する"
   - order: 9
     summary: "真魚が隼太へ親しげに話しかける"
   - order: 10
     summary: "隼太が曖昧に同意する"
   - order: 11
-    summary: "みずはが怒声を上げ、教室中の注目を集める"
+    summary: "みず葉が怒声を上げ、教室中の注目を集める"
   - order: 12
     summary: "クラスメイトたちが笑い、誤認が完全に固定される"
 

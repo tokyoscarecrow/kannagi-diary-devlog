@@ -18,7 +18,7 @@ participants:
   - "諏訪公命（初登場）"
   - "氷川真魚（観察のみ・台詞なし）"
   - "魔法者A（クリフハンガーのみ・名もなき犠牲者）"
-notes_participants: "みずは不在（前話の反復回避のため明示）"
+notes_participants: "みず葉不在（前話の反復回避のため明示）"
 
 purpose:
   story_role:
@@ -40,7 +40,7 @@ structure:
 
 beats:
   - order: 1
-    summary: "隼太が一人で出歩いているとき、地域でボランティア活動中の True North の現場を通りかかる（みずはは不在）"
+    summary: "隼太が一人で出歩いているとき、地域でボランティア活動中の True North の現場を通りかかる（みず葉は不在）"
   - order: 2
     summary: "香取が隼太を見つけ、再び接触。サークルを熱心に売り込む"
   - order: 3

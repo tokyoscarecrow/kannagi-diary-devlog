@@ -6,7 +6,7 @@ location:
   primary: "旧校舎地下 最終エリア"
 participants:
   - "飯綱隼太"
-  - "大神みずは"
+  - "大神みず葉"
   - "氷川真魚（不在／逃走）"
   - "明神明"
   - "来客・クラスメイト（群衆）"
@@ -15,7 +15,7 @@ purpose:
   story_role:
     - "隼太の選択（魔法使用の是非）を提示"
     - "明神の介入と情報提示（真魚の父）"
-    - "みずはの自力突破"
+    - "みず葉の自力突破"
     - "真魚の逃走と次シーンへの接続"
   emotional_role:
     - "極限状況の緊張"
@@ -25,7 +25,7 @@ purpose:
 structure:
   phases:
     - phase: "異変認識"
-      description: "隼太がみずはの不在と状況の異常を把握する"
+      description: "隼太がみず葉の不在と状況の異常を把握する"
     - phase: "現場到達"
       description: "地下で閉じ込めと水流入の状況を確認"
     - phase: "極限"
@@ -35,23 +35,23 @@ structure:
     - phase: "介入"
       description: "明神が魔法使用を止める"
     - phase: "理解"
-      description: "みずはが真魚の意図を見抜く"
+      description: "みず葉が真魚の意図を見抜く"
     - phase: "突破"
-      description: "みずはが物理的にロッカーを破壊"
+      description: "みず葉が物理的にロッカーを破壊"
     - phase: "解放"
       description: "水が流れ出し、危機が回避される"
     - phase: "違和感"
       description: "水位が想定より低く止まり、仕掛けの異常に気づく"
     - phase: "追跡"
-      description: "みずはが真魚を追い、隼太たちが続く"
+      description: "みず葉が真魚を追い、隼太たちが続く"
 
 beats:
   - order: 1
-    summary: "隼太がクラスメイトからみずはと真魚の行動を聞く"
+    summary: "隼太がクラスメイトからみず葉と真魚の行動を聞く"
   - order: 2
     summary: "地下へ向かい、異常（音・人だかり）を確認"
   - order: 3
-    summary: "ロッカー内に閉じ込められたみずはと水流入を認識"
+    summary: "ロッカー内に閉じ込められたみず葉と水流入を認識"
   - order: 4
     summary: "周囲の人々が危機を認識し、混乱が広がる"
   - order: 5
@@ -59,19 +59,19 @@ beats:
   - order: 6
     summary: "明神が魔法使用を制止し、リスクを示す"
   - order: 7
-    summary: "みずはが真魚の意図（魔法使用誘導）を看破する"
+    summary: "みず葉が真魚の意図（魔法使用誘導）を看破する"
   - order: 8
-    summary: "みずはが怒りによりロッカーを蹴破る"
+    summary: "みず葉が怒りによりロッカーを蹴破る"
   - order: 9
-    summary: "水が流出し、みずはが脱出"
+    summary: "水が流出し、みず葉が脱出"
   - order: 10
     summary: "水位が低く止まり、安全装置の存在が示唆される"
   - order: 11
-    summary: "みずはが真魚を追い、隼太と明神が続く"
+    summary: "みず葉が真魚を追い、隼太と明神が続く"
 
 key_information_revealed:
   - "真魚の目的は隼太に魔法を使わせること"
-  - "みずはは状況を理解し、自力で突破できる"
+  - "みず葉は状況を理解し、自力で突破できる"
   - "水は致死量ではなく制御されている可能性"
   - "明神は魔法使用を監視・制御する立場"
 
@@ -93,7 +93,7 @@ tone:
 foreshadowing:
   - "隼太の魔法使用問題の継続"
   - "真魚の計画の段階性"
-  - "みずはの行動力（今後の対立強化）"
+  - "みず葉の行動力（今後の対立強化）"
 
 character_notes:
   hayata:

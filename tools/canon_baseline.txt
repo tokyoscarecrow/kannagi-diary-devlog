@@ -1,0 +1,17 @@
+# 既知の許容違反（EP01/EP02の未修正問題）。将来これらを修正したらこの行を削除する。
+# 形式: 種別|ファイル|該当
+ID|raw/scene_cards/EP01/EP01_SC07.yaml|EP01_SC08
+ID|raw/scene_cards/EP01/EP01_SC08.yaml|EP01_SC07
+ID|raw/scene_cards/EP02/EP02_SC04.yaml|SC04
+NAME|raw/scene_cards/EP02/EP02_SC01.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC01.yaml|飯縄
+NAME|raw/scene_cards/EP02/EP02_SC02.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC02.yaml|飯縄
+NAME|raw/scene_cards/EP02/EP02_SC03.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC03.yaml|飯縄
+NAME|raw/scene_cards/EP02/EP02_SC04.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC04.yaml|飯縄
+NAME|raw/scene_cards/EP02/EP02_SC07.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC08.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC09.yaml|hayata
+NAME|raw/scene_cards/EP02/EP02_SC10.yaml|hayata

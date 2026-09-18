@@ -1,0 +1,44 @@
+# =============================================================
+# Canon Guard — Kannagi Diary リポジトリ検証の自動実行
+#
+# push と pull request のたびに tools/check_repo.py を走らせ、
+# 現行版に違反（エンコーディング/YAML破損/旧表記/id不一致/ref切れ）
+# が入ったら CI を落とす（赤信号を出す）。
+#
+# 番人は「検出」のみ。自動修正はしない。
+# 過去版（旧Config・OLD/・EP01/EP02の既知問題）は check_repo.py 側で
+# 対象外にしているため、ここで新しく増えた違反だけが捕まる。
+# =============================================================
+name: Canon Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.yaml'
+      - 'tools/check_repo.py'
+      - '.github/workflows/canon-guard.yml'
+  pull_request:
+    paths:
+      - '**.yaml'
+      - 'tools/check_repo.py'
+      - '.github/workflows/canon-guard.yml'
+  workflow_dispatch:   # 手動実行も可能にする
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: PyYAML をインストール
+        run: pip install pyyaml
+
+      - name: canon guard を実行
+        run: python3 tools/check_repo.py

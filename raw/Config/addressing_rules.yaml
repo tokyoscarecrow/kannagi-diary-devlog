@@ -31,7 +31,7 @@ addressing_rules:
         value: "真魚さん"
     to_sumiyoshi: "奨太郎"
     to_myojin: "明神さん"
-    to_suwa: "諏訪先輩"
+    to_suwa: "諏訪さん"
     to_anne_marie: "香取さん"
 
   # ---------------------------------------------
@@ -42,7 +42,7 @@ addressing_rules:
     to_mao: "氷川さん"
     to_sumiyoshi: "住吉"
     to_myojin: "明神さん"
-    to_suwa: "諏訪先輩"
+    to_suwa: "諏訪さん"
     to_anne_marie: "香取さん"
 
   # ---------------------------------------------
@@ -57,8 +57,8 @@ addressing_rules:
     to_mizuha: "大神さん"
     to_sumiyoshi: "住吉くん"
     to_myojin: "明神さん"
-    to_suwa: "諏訪先輩"
-    to_anne_marie: "香取先輩"
+    to_suwa: "諏訪さん"
+    to_anne_marie: "香取さん"
 
   # ---------------------------------------------
   # 4. 住吉奨太郎 → 他キャラ
@@ -68,8 +68,8 @@ addressing_rules:
     to_mizuha: "みず葉"
     to_mao: "氷川さん"
     to_myojin: "明神さん"
-    to_suwa: "諏訪先輩"
-    to_anne_marie: "香取さん"
+    to_suwa: "諏訪さん"
+    to_anne_marie: "アンネ＝マリーさん"
 
   # ---------------------------------------------
   # 5. 明神明 → 他キャラ

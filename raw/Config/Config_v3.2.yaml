@@ -147,7 +147,7 @@ CHARACTER_LAYER:
     magic:
       magic_user: false
       latent_possibility: ARMED（将来発動しうる。トゥルーエンドで発現）
-      latent_class: 第四類（プラズマ）。現時点では未発動であり、パッシブ感知も使用不可
+      latent_class: 第四類（プラズマ）。現時点では未発動だが、パッシブ感知は微弱にある
       note: 父の虹彩を見て隼太を魔法者と見抜いた（一般人には気づけないはず＝伏線）
   # --- 住吉奨太郎 ---
   sumiyoshi_shotaro:

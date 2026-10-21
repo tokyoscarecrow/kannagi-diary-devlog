@@ -1,7 +1,7 @@
 WORLD_AND_RULE_CONFIG:
   meta:
     title: "WORLD AND RULE CONFIG"
-    project: "かんなびメモランダム"
+    project: "かんなぎダイアリー"
     version: "1.1.1"
     layer: "L2"
     status: "active"

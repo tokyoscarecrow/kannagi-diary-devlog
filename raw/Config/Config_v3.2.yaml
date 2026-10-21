@@ -38,7 +38,7 @@ MAGOSHA_COMMON_RULES:
   exposure_risk:
     description: 魔法の使用は社会的リスクを伴う（監視・記録・拘束・永久隔離）
   passive_sign:
-    description: パッシブ発動時、虹彩がウグイス色に明滅する（魔法者のみ気づく）
+    description: 魔法発動時、虹彩がウグイス色に明滅する（魔法者のみ気づく）
   ref: 詳細は L2 WORLD_AND_RULE_CONFIG.yaml を参照
 # =========================================
 # HUMAN BEHAVIOR CONSTRAINTS

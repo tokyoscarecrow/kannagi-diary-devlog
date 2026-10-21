@@ -24,7 +24,7 @@ episode:
   depends_on:
     - GLOBAL_CONFIG@0.1.0
     - PROJECT_MASTER_CONTEXT@1.0.0
-    - WORLD_AND_RULE_CONFIG@1.0.0
+    - WORLD_AND_RULE_CONFIG@1.1.1
     - Config@3.2
     - addressing_rules@1.0（2026-10-15更新：to_suwa＝諏訪さん）
     - kannnagi_chara_data.xlsx（日吉・熊野の正本）

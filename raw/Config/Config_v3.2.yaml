@@ -1,6 +1,10 @@
-config_version: v3.2
-last_updated: '2026-10-21'
+config_version: v3.2.1
+last_updated: '2026-10-24'
 changelog:
+- version: v3.2.1
+  changes:
+  - 真魚の敬語原則を対人発話に限定し、独り言・内心は自然な常体を許容
+  - 対人関係の敬語崩れ禁止と、独り言の常体を明示的に区別
 - version: v3.2
   changes:
   - WORLD_AND_RULE_CONFIG v1.1.1 と能力表記を同期
@@ -132,7 +136,7 @@ CHARACTER_LAYER:
     speech_style:
       tone: polite
       traits:
-      - 常に敬語
+      - 対人会話では原則として敬語
       - 丁寧だが過剰ではない
       - 感情を抑制
       - 一歩距離を置いた言い方
@@ -140,10 +144,21 @@ CHARACTER_LAYER:
       - そうですね
       - 問題ありません
       - 少しよろしいでしょうか
+      monologue_and_inner_voice:
+        rule: >-
+          独り言・内心は対人会話ではないため、自然な常体を使用してよい。
+          無人の場での独り言にまで敬語を強制しない。
+          ただし感情抑制・簡潔さという人物の基調は維持する。
+        examples:
+        - "……ここ、かな"
+        - "……なんだろう"
+        note: >-
+          これは既存の敬語原則の適用範囲を明確にするものであり、
+          対人会話での口調変化イベントには該当しない。
       forbidden:
-      - 砕けた口調
+      - 対人会話での砕けた口調
       - 感情的な発言
-      - 敬語崩れ（※例外は将来イベント時のみ）
+      - 対人会話での敬語崩れ（※例外は将来イベント時のみ）
     magic:
       magic_user: false
       latent_possibility: ARMED（将来発動しうる。トゥルーエンドで発現）

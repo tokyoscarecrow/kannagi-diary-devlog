@@ -1,8 +1,8 @@
 # ==========================================================
 # ADDRESSING RULES
 # File: config/addressing_rules.yaml
-# Version: 1.0
-# Updated: 2026-02-16
+# Version: 1.1
+# Updated: 2026-11-10
 #
 # Purpose:
 #   - キャラクター同士の呼称・敬称・心理距離を一貫管理する
@@ -81,6 +81,7 @@ addressing_rules:
     to_sumiyoshi: "住吉くん"
     to_suwa: "諏訪さん"
     to_anne_marie: "香取さん"
+    to_hiyoshi: "統括官"   # EP04_SC02 作者承認 2026-11-09
 
   # ---------------------------------------------
   # 6. 諏訪公命 → 他キャラ
@@ -103,3 +104,9 @@ addressing_rules:
     to_sumiyoshi: "住吉くん"
     to_myojin: "明神さん"
     to_suwa: "諏訪様"
+
+  # ---------------------------------------------
+  # 8. 日吉拓哉 → 他キャラ（EP04_SC02 作者承認 2026-11-09）
+  # ---------------------------------------------
+  hiyoshi_takuya:
+    to_myojin: "明神くん"

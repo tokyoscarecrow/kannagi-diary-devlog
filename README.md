@@ -1,5 +1,12 @@
 # Kannagi Diary Devlog
 
+## Licensing / ライセンス
+
+This repository uses **multiple licenses**: MIT for software, CC BY 4.0 for reusable templates and general methodology, and all rights reserved for newly contributed original fiction and story-specific material. Previously published CC0 material remains available under CC0. See [LICENSE](LICENSE) for the exact file scopes, exceptions, and transition rule.
+
+本リポジトリは**用途別の複数ライセンス**を採用しています。プログラムはMIT、汎用テンプレート・一般的な制作手法はCC BY 4.0、作品固有の設定・構成・本文など今後新たに追加する創作物は原則として権利留保です。従来CC0で公開した部分の利用条件は変更しません。詳しくは [LICENSE](LICENSE) を参照してください。
+
+
 ## Narrative Design for the Age of AI
 
 This repository is not a collection of stories.

@@ -1,0 +1,20 @@
+# General documentation — CC BY 4.0 / 一般技術・研究資料のライセンス
+
+Original copyrightable contributions to general methodology and technical documentation in this directory published after the transition described in the repository root [LICENSE](../LICENSE) are licensed under:
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution: Ryo Yoshida (tokyoscarecrow), https://github.com/tokyoscarecrow/kannagi-diary-devlog.
+Indicate changes and provide the license link when reusing.
+
+## Exclusions / 除外
+
+The following story-specific episode analyses and notes are ALL RIGHTS RESERVED with respect to newly published copyrightable material:
+- `60_ep02_design_notes.md`
+- `90_ep01_review.md`
+- `95_ep01_re_review.md`
+- `100_ep02_review.md`
+
+The previous CC0 dedication for material already published remains effective. See the repository root [LICENSE](../LICENSE).

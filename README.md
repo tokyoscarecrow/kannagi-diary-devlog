@@ -9,7 +9,7 @@ This repository uses **multiple licenses**: MIT for software, CC BY 4.0 for reus
 
 ## Narrative Design for the Age of AI
 
-This repository is not a collection of stories.
+This repository is not merely a collection of stories.
 
 It is an experiment in **designing narrative as a structured system**, where AI generates stories under explicitly defined constraints.
 
@@ -52,6 +52,7 @@ flowchart TD
 
     L5 -->|validation| R["Review / decision_logs"]
     R -->|approved change| L3
+    R -->|approved manuscript| M["Final Manuscripts / manuscripts/"]
 ```
 ---
 
@@ -84,7 +85,7 @@ This introduces **governance into AI narrative generation**.
 
 ---
 
-### 3. Act II – EP03 (Current Development)
+### 3. Act II – EP03 (Completed Reference Case)
 
 Episode 03 opens the second act. It introduces structural problems that
 EP01/EP02 never had to solve:
@@ -93,6 +94,8 @@ EP01/EP02 never had to solve:
 - **Dual-line alternating progression** (SC04–SC07), converging at SC07
 - **Cliffhanger enforcement** — every scene must end on a hook
 - **Non-converging tension curve** — the chapter ends suspended, still rising
+
+The published manuscript contains nine installments; the ten-scene design described above is retained as a design reference.
 
 EP03 also separates **witnessing** from **participating** as a hard structural
 constraint: the protagonist may only witness the climax, never join it.
@@ -140,6 +143,8 @@ validate against.** Generated prose is checked for deviation from it.
 
 If you are new to this repository:
 
+Read the [published manuscripts (EP01–EP03)](manuscripts/README.md) to compare the design with its output.
+
 1. Read the current state:
    - `docs/00_current_state.md`
 
@@ -147,7 +152,7 @@ If you are new to this repository:
    - `docs/10_config_design.md`
 
 3. See actual structure:
-   - `raw/episodes/ep03_structure.yaml` (current)
+   - `raw/episodes/ep03_structure.yaml` (design reference)
    - `raw/episodes/ep02_structure.yaml` (reference)
 
 4. Check core configs:
@@ -175,7 +180,13 @@ templates/   Reusable templates for configs and scene cards
 
 characters/  Character-related reference materials
 
-diagrams/    System and narrative structure diagrams
+design/      Narrative design materials
+
+production/  Episode breakdowns and state snapshots
+
+manuscripts/ Published episode manuscripts
+
+tools/       Production support tools
 
 
 ---
@@ -215,8 +226,8 @@ This project addresses that by:
 
 - Config system: Active (v3.1)
 - Governance system: Active
-- EP01 / EP02: Structure complete
-- EP03 (Act II): In development — SC01–SC03 defined
+- EP01–EP03: Published manuscripts complete (8 / 10 / 9 installments)
+- EP04: Episode breakdown available
 
 ---
 
@@ -224,7 +235,7 @@ This project addresses that by:
 
 ## AI時代のナラティブ設計
 
-このリポジトリは物語集ではない。
+このリポジトリは単なる物語集ではない。
 
 これは、**物語を構造として設計する実験**である。
 
@@ -282,7 +293,7 @@ AI生成に「統制」を導入する。
 
 ---
 
-### 3. 第二幕：EP03（現在の主実験）
+### 3. 第二幕：EP03（完成済みの参照事例）
 
 第三章は第二幕の開幕であり、EP01／EP02 では発生しなかった構造課題を扱う。
 
@@ -290,6 +301,8 @@ AI生成に「統制」を導入する。
 - **2ライン交互進行**（SC04〜SC07）と、SC07での収束
 - **全SCラストのクリフハンガー義務化**
 - **緊張曲線を収束させない**（上昇したまま章を閉じる）
+
+公開本文は全9話。上記の10SC構成は設計時の参照資料として保持する。
 
 さらに「**目撃**」と「**加担**」の分離を構造条件として固定している。
 主人公はクライマックスを目撃するのみで、加担は次章へ繰り越す。
@@ -336,6 +349,8 @@ EP02（誤誘導・認知操作・「嘘」の構造化）は完了し、参照�
 
 初めて読む場合：
 
+[公開済み完成本文（EP01〜EP03）](manuscripts/README.md)から、設計と成果物を比較できる。
+
 1. 現在状態：
    - `docs/00_current_state.md`
 
@@ -343,7 +358,7 @@ EP02（誤誘導・認知操作・「嘘」の構造化）は完了し、参照�
    - `docs/10_config_design.md`
 
 3. 構造：
-   - `raw/episodes/ep03_structure.yaml`（現行）
+   - `raw/episodes/ep03_structure.yaml`（設計参照）
    - `raw/episodes/ep02_structure.yaml`（参照）
 
 4. コアConfig：
@@ -371,7 +386,13 @@ templates/   再利用テンプレート
 
 characters/  キャラクター関連資料
 
-diagrams/    図解
+design/      ナラティブ設計資料
+
+production/  エピソード構成・状態管理
+
+manuscripts/ 公開済み完成本文
+
+tools/       制作支援ツール
 
 
 ---
@@ -406,5 +427,5 @@ diagrams/    図解
 
 - Configシステム：稼働中（v3.1）
 - ガバナンス：運用中
-- EP01／EP02：構造確定
-- EP03（第二幕）：開発中 — SC01〜SC03 定義済み
+- EP01〜EP03：公開本文完成（8／10／9話）
+- EP04：エピソード構成資料あり

@@ -36,6 +36,7 @@ Attribution for newly licensed material: **Ryo Yoshida (tokyoscarecrow)**, with 
 - `characters/`
 - `design/`
 - `production/`
+- `manuscripts/` (published episode manuscripts)
 - `raw/` (including world/character configs, episode structures, Scene Cards, and decision logs)
 - `archive/` (including generated drafts and story text)
 - `docs/60_ep02_design_notes.md`
